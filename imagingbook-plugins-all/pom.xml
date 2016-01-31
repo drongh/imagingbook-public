@@ -17,8 +17,9 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<directory>${project.basedir}/target</directory>
-		<outputDirectory>${project.build.directory}/ImageJ/plugins</outputDirectory>
+		<!-- <directory>${project.basedir}/target</directory> -->
+		<!-- <outputDirectory>${project.build.directory}/ImageJ/plugins</outputDirectory>  -->
+		<outputDirectory>${project.basedir}/ImageJ/plugins</outputDirectory>
 		<plugins>
 			<!-- http://stackoverflow.com/questions/6689511/maven-how-to-place-the-output-jar-into-another-folder -->
 			<plugin>
@@ -26,10 +27,47 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.3.1</version>
 				<configuration>
-					<outputDirectory>${project.build.directory}/ImageJ/jars</outputDirectory>
-					<finalName>${project.name}_${project.version}</finalName>
+					<!-- <outputDirectory>${project.build.directory}/ImageJ/jars</outputDirectory> -->
+					<!-- <finalName>${project.name}_${project.version}</finalName> -->
 				</configuration>
 			</plugin>
+			<!-- copy ij.jar, https://maven.apache.org/plugins/maven-dependency-plugin/examples/copying-artifacts.html -->
+			<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-dependency-plugin</artifactId>
+		        <version>2.10</version>
+		        <executions>
+		          <execution>
+		            <id>copy</id>
+		            <phase>package</phase>
+		            <goals>
+		              <goal>copy</goal>
+		            </goals>
+		            <configuration>
+		              <artifactItems>
+		                <artifactItem>
+		                  <groupId>net.imagej</groupId>
+		                  <artifactId>ij</artifactId>
+		                  <version>1.50e</version>
+		                  <overWrite>false</overWrite>
+		                  <outputDirectory>${project.basedir}/ImageJ</outputDirectory>
+		                  <!-- <destFileName>optional-new-name.jar</destFileName>  -->
+		                </artifactItem>
+		                <artifactItem>
+		                  <groupId>com.imagingbook</groupId>
+		                  <artifactId>imagingbook-common</artifactId>
+		                  <overWrite>false</overWrite>
+		                  <outputDirectory>${project.basedir}/ImageJ/jars</outputDirectory>
+		                </artifactItem>
+		              </artifactItems>
+		              <!-- <outputDirectory>${project.build.directory}/wars</outputDirectory> -->
+		              <overWriteReleases>false</overWriteReleases>
+		              <overWriteSnapshots>true</overWriteSnapshots>
+		            </configuration>
+		          </execution>
+		        </executions>
+		      </plugin>
+			<!-- end of copy -->
 		</plugins>
 	</build>
 	<reporting>
