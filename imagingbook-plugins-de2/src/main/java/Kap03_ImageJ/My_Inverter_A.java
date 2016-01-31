@@ -13,17 +13,22 @@ import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 
+/**
+ * This is a minimal ImageJ plugin (PlugInFilter) that inverts an
+ * 8-bit grayscale (byte) image.
+ * @author WB
+ */
 public class My_Inverter_A implements PlugInFilter {
 
 	public int setup(String args, ImagePlus im) {
-		return DOES_8G;	// this plugin accepts 8-bit grayscale images
+		return DOES_8G; // this plugin accepts 8-bit grayscale images 
 	}
 
 	public void run(ImageProcessor ip) {
 		int M = ip.getWidth();
-		int N = ip.getHeight(); 
+		int N = ip.getHeight();
 
-		// iterate over all image coordinates (u,v)
+		// iterate over all image coordinates
 		for (int u = 0; u < M; u++) {
 			for (int v = 0; v < N; v++) {
 				int p = ip.getPixel(u, v);
@@ -31,5 +36,5 @@ public class My_Inverter_A implements PlugInFilter {
 			}
 		}
 	}
-			
+
 }

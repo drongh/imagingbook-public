@@ -27,7 +27,7 @@ import java.awt.geom.Point2D;
 /** 
  * This plugin implements a simple Hough transform for straight lines.
  * It expects a binary (8-bit) image, with background = 0 and foreground (contour) 
- * pixels with values > 0.
+ * pixels with values &gt; 0.
  * TODO: Use a vector overly instead of pixel painting (for the detected lines)
  * @author WB
  * @version 2014/02/06

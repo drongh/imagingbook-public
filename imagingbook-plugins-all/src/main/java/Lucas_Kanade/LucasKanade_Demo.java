@@ -49,16 +49,19 @@ import java.util.Random;
  * ROI, because the original quad vertices are assumed to be positioned at pixel 
  * centers. Thus if the ROI is 2 pixels wide, the corresponding quad only has width 1.
  * 
- * The following steps are performed:
- * Step 0: Create the search image I.
- * Step 1: Get the rectangle of the ROI, create the (empty) reference image R of the same size.
- * Step 2: Get the corner points (Q) of the ROI
- * Step 3: Perturb the ROI corners to form the quad QQ and extract the reference image R.
- * Step 4: Create the Lucas-Kanade matcher (forward or inverse).
- * Step 5: Calculate the initial mapping Tinit from (centered) R -> Q.
- * Step 6: Calculate the real mapping from (centered) R -> QQ (for validation only).
- * Step 7: Initialize the matcher and run the matching loop.
- * Step 8: Evaluate the results.
+ * <p>The following steps are performed:</p>
+ * <ul>
+ * <li>Step 0: Create the search image I.</li>
+ * <li>Step 1: Get the rectangle of the ROI, create the (empty) reference image R of the same size.</li>
+ * <li>Step 2: Get the corner points (Q) of the ROI.</li>
+ * <li>Step 3: Perturb the ROI corners to form the quad QQ and extract the reference image R.</li>
+ * <li>Step 4: Create the Lucas-Kanade matcher (forward or inverse).</li>
+ * <li>Step 5: Calculate the initial mapping Tinit from (centered) R &rarr; Q.</li>
+ * <li>Step 6: Calculate the real mapping from (centered) R &rarr; QQ (for validation only).</li>
+ * <li>Step 7: Initialize the matcher and run the matching loop.</li>
+ * <li>Step 8: Evaluate the results.</li>
+ * </ul>
+ * 
  * @author WB
  */
 public class LucasKanade_Demo implements PlugInFilter {

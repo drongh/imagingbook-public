@@ -20,7 +20,7 @@ import imagingbook.pub.morphology.BinaryMorphologyFilter;
 /**
  * This ImageJ plugin demonstrates morphological thinning
  * on binary images. Pixels with value 0 are considered
- * background, values > 0 are foreground. The plugin 
+ * background, values &gt; 0 are foreground. The plugin 
  * modifies the supplied image.
  * 
  * @author W. Burger

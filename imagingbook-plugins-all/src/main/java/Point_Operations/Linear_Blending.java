@@ -20,7 +20,7 @@ import imagingbook.lib.ij.IjUtils;
  * This plugin demonstrates alpha blending between two images:
  * bg: the background image (passed to and modified by the run method),
  * fg: the foreground image (selected in a user dialog).
- * New (simpler) version using the {@link IjUtils.getOpenImages} library method.
+ * New (simpler) version using the {@code imagingbook.lib.ij.IjUtils.getOpenImages} library method.
  * @author WB
  */
 public class Linear_Blending implements PlugInFilter {

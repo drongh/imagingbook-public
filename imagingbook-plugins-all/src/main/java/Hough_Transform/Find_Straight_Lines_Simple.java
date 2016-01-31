@@ -20,7 +20,7 @@ import imagingbook.pub.hough.HoughTransformLines.Parameters;
 /** 
  * This plugin implements a simple Hough transform for straight lines.
  * It expects a binary (8-bit) image, with background = 0 and foreground (contour) 
- * pixels with values > 0.
+ * pixels with values &gt; 0.
  * 
  * @author WB
  * @version 2013/08/25

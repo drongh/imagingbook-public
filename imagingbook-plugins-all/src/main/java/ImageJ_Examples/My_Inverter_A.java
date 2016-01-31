@@ -9,41 +9,32 @@
  *******************************************************************************/
 package ImageJ_Examples;
 
-import ij.IJ;
 import ij.ImagePlus;
-import ij.plugin.PlugIn;
+import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 
 /**
- * This plugin does the same as {@link XY_Plugin} but is based on the {@link PlugIn}
- * instead of the {@link PlugInFilter} interface. Its advantage is that only one
- * method (run()) must be implemented. Disadvantage is that testing if an image
- * is currently open and is of the proper type must be explicitly coded.
+ * This is a minimal ImageJ plugin (PlugInFilter) that inverts an
+ * 8-bit grayscale (byte) image.
  * @author WB
  */
-public class Inverter_Plugin_B implements PlugIn {
+public class My_Inverter_A implements PlugInFilter {
 
-	public void run(String args) {
-		ImagePlus im = IJ.getImage(); // WindowManager.getCurrentImage();
-		
-		if (im.getType() != ImagePlus.GRAY8) {
-			IJ.error("8-bit grayscale image required"); 
-			return;
-		}
-		
-		ImageProcessor ip = im.getProcessor();
+	public int setup(String args, ImagePlus im) {
+		return DOES_8G; // this plugin accepts 8-bit grayscale images 
+	}
+
+	public void run(ImageProcessor ip) {
 		int M = ip.getWidth();
 		int N = ip.getHeight();
 
 		// iterate over all image coordinates
 		for (int u = 0; u < M; u++) {
 			for (int v = 0; v < N; v++) {
-				int p = ip.get(u, v);
-				ip.set(u, v, 255 - p);
+				int p = ip.getPixel(u, v);
+				ip.putPixel(u, v, 255 - p);
 			}
 		}
-		
-		im.updateAndDraw();		// redraw the modified image
 	}
 
 }
