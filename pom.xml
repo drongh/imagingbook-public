@@ -32,7 +32,7 @@
   	<dependency>
   		<groupId>net.imagej</groupId>
   		<artifactId>ij</artifactId>
-  		<version>[1.50e,)</version>
+  		<version>1.50e</version>
   	</dependency>
   	<dependency>
   		<!-- from http://stackoverflow.com/questions/3356716/com-suntoolsjar1-4-2-missing-when-running-perform-eclipse-in-roo -->
