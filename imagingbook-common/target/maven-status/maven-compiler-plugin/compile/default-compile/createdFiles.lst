@@ -255,7 +255,6 @@ imagingbook\pub\fd\PolygonSampler.class
 imagingbook\pub\regions\DepthFirstLabeling.class
 imagingbook\pub\edgepreservingfilters\PeronaMalikFilter$FilterColorColorGradient.class
 imagingbook\pub\matching\DistanceTransform$Norm.class
-imagingbook\pub\regions\ContourTracer.class
 imagingbook\pub\sift\scalespace\ScaleOctave.class
 imagingbook\lib\image\PixelIndexer$1.class
 imagingbook\lib\math\VectorNorm$1.class
