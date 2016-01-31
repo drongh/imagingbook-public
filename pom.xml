@@ -4,6 +4,7 @@
   <artifactId>imagingbook</artifactId>
   <!-- https://issues.apache.org/jira/browse/MNG-624 -->
   <version>FIXED</version> <!-- <version>0.0.1-SNAPSHOT</version> -->
+  
   <properties>
   	<imagingbook.version>1.0-SNAPSHOT</imagingbook.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,7 +34,15 @@
   		<artifactId>ij</artifactId>
   		<version>[1.50e,)</version>
   	</dependency>
-  </dependencies>
+  	<dependency>
+  		<!-- from http://stackoverflow.com/questions/3356716/com-suntoolsjar1-4-2-missing-when-running-perform-eclipse-in-roo -->
+  		<groupId>com.sun</groupId>
+  		<artifactId>tools</artifactId>
+  		<version>1.4.2</version>
+  		<scope>system</scope>
+        <systemPath>C:/Program Files/Java/jdk1.8.0_65/lib/tools.jar</systemPath>
+  	</dependency>
+	  </dependencies>
   <build>
 	  <pluginManagement>
 	     <plugins>
