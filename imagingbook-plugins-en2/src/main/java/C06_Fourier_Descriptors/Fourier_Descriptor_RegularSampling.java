@@ -40,7 +40,7 @@ import java.util.List;
  * from the Fourier descriptor 'fd'. Finally, a pair of invariant descriptors (contained in the 
  * array 'fdAB') is calculated.
  * 
- * Note: This plugin only works with BYTE (grayscale) images, pixel values >0 are assumed to be 
+ * Note: This plugin only works with BYTE (grayscale) images, pixel values &gt; 0 are assumed to be 
  * foreground. Lookup-tables are ignored.
  * 
  * @author W. Burger

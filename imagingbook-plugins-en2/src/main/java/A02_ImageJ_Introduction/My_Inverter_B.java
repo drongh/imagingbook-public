@@ -15,7 +15,7 @@ import ij.plugin.PlugIn;
 import ij.process.ImageProcessor;
 
 /**
- * This plugin does the same as {@link XY_Plugin} but is based on the {@link ij.plugin.PlugIn}
+ * This plugin does the same as {@link My_Inverter_A} but is based on the {@link ij.plugin.PlugIn}
  * instead of the {@link ij.plugin.filter.PlugInFilter} interface. Its advantage is that only one
  * method (run()) must be implemented. Disadvantage is that testing if an image
  * is currently open and is of the proper type must be explicitly coded.
