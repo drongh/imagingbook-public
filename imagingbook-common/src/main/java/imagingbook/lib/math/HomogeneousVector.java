@@ -41,7 +41,8 @@ public class HomogeneousVector extends ArrayRealVector {
 	/**
 	 * Converts this homogeneous vector back to
 	 * Cartesian coordinates.
-	 * @return
+	 * 
+	 * @return the Cartesian vector
 	 */
 	public RealVector toCartesian() {
 		final int n = getDimension();

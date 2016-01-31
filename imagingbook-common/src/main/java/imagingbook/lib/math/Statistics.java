@@ -100,38 +100,38 @@ public abstract class Statistics {
 	 * K = 3 dimensions
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		
-		// example: n = 4 samples of dimension m = 3:
-		// samples[i][j], i = column (sample index), j = row (dimension index).
-		double[][] samples = { 
-				{75, 37, 12},	// i = 0
-				{41, 27, 20},	// i = 1
-				{93, 81, 11},	// i = 2
-				{12, 48, 52}	// i = 3
-		};
-		
-		// covariance matrix Cov (3x3)
-		double[][] cov = covarianceMatrix(samples);
-		System.out.println("cov = " + Matrix.toString(cov));
-		
-		System.out.println();
-		
-		double[][] icov = Matrix.inverse(cov);
-		System.out.println("icov = " + Matrix.toString(icov));
-		
-		double trace = MatrixUtils.createRealMatrix(cov).getTrace();
-		System.out.println("trace(cov) = " + trace);
-		
-//		double trace2 = Matrix.trace(cov);
-//		System.out.println("trace2(cov) = " + trace2);
-		
-		double Fnorm = MatrixUtils.createRealMatrix(cov).getFrobeniusNorm();
-		System.out.println("Fnorm(cov) = " + Fnorm);
-		
-//		double Fnorm2 = Matrix.froebeniusNorm(cov);
-//		System.out.println("Fnorm2(cov) = " + Fnorm2);
-	}
+//	public static void main(String[] args) {
+//		
+//		// example: n = 4 samples of dimension m = 3:
+//		// samples[i][j], i = column (sample index), j = row (dimension index).
+//		double[][] samples = { 
+//				{75, 37, 12},	// i = 0
+//				{41, 27, 20},	// i = 1
+//				{93, 81, 11},	// i = 2
+//				{12, 48, 52}	// i = 3
+//		};
+//		
+//		// covariance matrix Cov (3x3)
+//		double[][] cov = covarianceMatrix(samples);
+//		System.out.println("cov = " + Matrix.toString(cov));
+//		
+//		System.out.println();
+//		
+//		double[][] icov = Matrix.inverse(cov);
+//		System.out.println("icov = " + Matrix.toString(icov));
+//		
+//		double trace = MatrixUtils.createRealMatrix(cov).getTrace();
+//		System.out.println("trace(cov) = " + trace);
+//		
+////		double trace2 = Matrix.trace(cov);
+////		System.out.println("trace2(cov) = " + trace2);
+//		
+//		double Fnorm = MatrixUtils.createRealMatrix(cov).getFrobeniusNorm();
+//		System.out.println("Fnorm(cov) = " + Fnorm);
+//		
+////		double Fnorm2 = Matrix.froebeniusNorm(cov);
+////		System.out.println("Fnorm2(cov) = " + Fnorm2);
+//	}
 	
 /* Results (bias-corrected):
 cov = {{1296.250, 442.583, -627.250}, 

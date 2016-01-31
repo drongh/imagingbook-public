@@ -18,8 +18,8 @@ public abstract class Enums {
 	 * Assume the enum definition: enum MyEnum {A, B, C};
 	 * Usage: String[] names = getEnumNames(MyEnum.class);
 	 * 
-	 * @param enumclass
-	 * @return
+	 * @param enumclass enumeration class
+	 * @return the names defined for the specified enumeration type
 	 */
 	public static String[] getEnumNames(Class<? extends Enum<?>> enumclass) {
 		Enum<?>[] eConstants = (Enum<?>[]) enumclass.getEnumConstants();

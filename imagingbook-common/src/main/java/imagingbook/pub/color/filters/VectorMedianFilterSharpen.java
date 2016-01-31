@@ -61,10 +61,6 @@ public class VectorMedianFilterSharpen extends GenericFilter {
 		this(new Parameters());
 	}
 	
-	/**
-	 * Accepts parameter object
-	 * @param params
-	 */
 	public VectorMedianFilterSharpen(Parameters params) {
 		this.params = params;
 		mask = new FilterMask(params.radius);

@@ -130,13 +130,13 @@ public class IntegralImage {
 	}
 	
 	/**
-	 * Calculates the mean of the region defined by the u/v
-	 * parameters.
+	 * Calculates the mean of the image values in the specified rectangle.
+	 * 
 	 * @param ua leftmost position in R
 	 * @param va top position in R
 	 * @param ub rightmost position in R {@literal (u1 >= u0)}
 	 * @param vb bottom position in R {@literal (v1 >= v0)}
-	 * @return
+	 * @return the mean value for the specified rectangle
 	 */
 	public double getMean(int ua, int va, int ub, int vb) {
 		int N = getSize(ua, va, ub, vb);
@@ -150,13 +150,13 @@ public class IntegralImage {
 	}
 	
 	/**
-	 * Calculates the variance of the region defined by the u/v
+	 * Calculates the variance of the image values in the specified rectangle.
 	 * parameters.
 	 * @param ua leftmost position in R
 	 * @param va top position in R
 	 * @param ub rightmost position in R {@literal (u1 >= u0)}
 	 * @param vb bottom position in R {@literal (v1 >= v0)}
-	 * @return
+	 * @return the variance for the specified rectangle
 	 */
 	public double getVariance(int ua, int va, int ub, int vb) {
 		int N = getSize(ua, va, ub, vb);

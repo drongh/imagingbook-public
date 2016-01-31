@@ -6,7 +6,6 @@ imagingbook\pub\edgepreservingfilters\PeronaMalikFilter$ConductanceFunction.clas
 imagingbook\pub\color\filters\ScalarMedianFilter$Parameters.class
 imagingbook\lib\filters\LinearFilter.class
 imagingbook\lib\image\PixelIndexer$DefaultValueIndexer.class
-imagingbook\pub\color\image\cieUtil.class
 imagingbook\pub\regions\ContourOverlay.class
 imagingbook\pub\regions\geometry\ConvexHull.class
 imagingbook\lib\filters\GaussianFilter.class
@@ -38,6 +37,7 @@ imagingbook\lib\math\VectorNorm$Linf.class
 imagingbook\pub\dft\Dft1d.class
 imagingbook\pub\sift\KeyPoint.class
 imagingbook\pub\sift\util\SiftKeyDisplay.class
+imagingbook\pub\color\image\CieUtil.class
 imagingbook\lib\image\ImageAccessor$Short.class
 imagingbook\pub\color\image\sRgbUtil.class
 imagingbook\lib\image\ImageAccessor$Scalar.class

@@ -16,9 +16,10 @@ public abstract class VectorNorm {
 	public abstract double magnitude(int[] x);
 
 	/**
+	 * Calculates the distance between two vectors.
 	 * 
-	 * @param a
-	 * @param b
+	 * @param a first vector
+	 * @param b second vector
 	 * @return the distance between vectors a and b
 	 */
 	public abstract double distance(double[] a, double[] b);
@@ -27,8 +28,8 @@ public abstract class VectorNorm {
 
 	/**
 	 * 
-	 * @param a
-	 * @param b
+	 * @param a first vector
+	 * @param b second vector
 	 * @return the squared distance between vectors a and b
 	 */
 	public abstract double distance2(double[] a, double[] b);
@@ -42,8 +43,9 @@ public abstract class VectorNorm {
 	 * n. This is prim. used for scaling color distances (n = 3).
 	 * E.g., if components are distributed in [0,255], the distances
 	 * multiplied by this factor should again be in [0,255].
-	 * @param n
-	 * @return
+	 * 
+	 * @param n dimensionality
+	 * @return scale factor
 	 */
 	public abstract double getScale(int n);
 

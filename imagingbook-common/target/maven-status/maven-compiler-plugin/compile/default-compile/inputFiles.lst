@@ -161,7 +161,7 @@ C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imag
 C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\lib\filters\GaussianFilter.java
 C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\pub\dct\DctMatrixTest.java
 C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\pub\fd\FourierDescriptor.java
-C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\pub\color\image\cieUtil.java
+C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\pub\color\image\CieUtil.java
 C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\pub\hough\HoughTransformLinesPosRadius.java
 C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\pub\color\image\HsvConverter.java
 C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\src\main\java\imagingbook\pub\regions\ContourOverlay.java

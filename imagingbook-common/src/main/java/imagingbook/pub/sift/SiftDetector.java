@@ -112,8 +112,9 @@ public class SiftDetector {
 	/**
 	 * Only used for debugging: produces key points with orientation
 	 * histograms attached for display purposes.
-	 * @param keypoints
-	 * @return
+	 * 
+	 * @param keypoints the sequence of original key points
+	 * @return a sequence of enhanced key points
 	 */
 	public List<KeyPoint> makeRichKeypoints(List<KeyPoint> keypoints) {
 		if (params.DEBUG) {IJ.log("makeSiftDescriptors...");}
@@ -142,8 +143,9 @@ public class SiftDetector {
 
 	/**
 	 * Used for debugging/illustrations only!
-	 * @param oh
-	 * @return
+	 * 
+	 * @param oh orientation histogram
+	 * @return list of histogram indices for the peak orientations
 	 */
 	public List<Double> findPeakOrientationIndices(float[] oh) {
 		int nb = oh.length;
@@ -185,7 +187,8 @@ public class SiftDetector {
 
 	/**
 	 * THE REAL STUFF: Creating the SIFT Descriptors
-	 * @return
+	 * 
+	 * @return the sequence of extracted SIFT descriptors
 	 */
 	public List<SiftDescriptor> getSiftFeatures() {
 		List<KeyPoint> keyPoints = getKeyPoints();

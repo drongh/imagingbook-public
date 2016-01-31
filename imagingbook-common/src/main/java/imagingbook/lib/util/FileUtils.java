@@ -130,7 +130,7 @@ public abstract class FileUtils {
 	 * 
 	 * @param classname name of the class, e.g. {@literal imagingbook.lib.util.FileUtils}
 	 * @param recourcePath path (relative to the location of the class) to the specified resource 
-	 * @return
+	 * @return {@code true} if the specified resource was found, {@code false} otherwise
 	 */
 	public static boolean checkResource(String classname, String recourcePath) {
 		String logStr = "  checking resource " + classname + ":" + recourcePath + " ... ";
@@ -153,8 +153,6 @@ public abstract class FileUtils {
 	 * @param theClass class whose source location specifies the root 
 	 * @param relPath path relative to the root
 	 * @return a sequence of paths or {@code null} if the specified path is not a directory
-	 * @throws URISyntaxException
-	 * @throws IOException
 	 */
 	public static Path[] listResources(Class<?> theClass, String relPath) {
 		URI uri = null;

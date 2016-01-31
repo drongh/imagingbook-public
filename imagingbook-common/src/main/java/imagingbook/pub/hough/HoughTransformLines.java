@@ -399,9 +399,10 @@ public class HoughTransformLines {
 
 		/**
 		 * Public constructor (only available with an enclosing HoughTransformLines instance!)
-		 * @param angle
-		 * @param radius
-		 * @param count
+		 * 
+		 * @param angle angle
+		 * @param radius radius
+		 * @param count count
 		 */
 		public HoughLine(double angle, double radius, int count) {
 			this.angle  = angle;	

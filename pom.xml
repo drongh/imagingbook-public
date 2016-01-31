@@ -34,7 +34,7 @@
   		<version>[1.50e,)</version>
   	</dependency>
   </dependencies>
-	<build>
+  <build>
 	  <pluginManagement>
 	     <plugins>
 	        <plugin>

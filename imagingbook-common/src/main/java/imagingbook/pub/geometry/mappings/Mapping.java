@@ -103,8 +103,9 @@ public abstract class Mapping implements Cloneable {
 	/**
 	 * Transforms the source image (contained in "srcInterpol") to the "target"
 	 * image using this geometric mapping and the specified pixel interpolator.
-	 * @param sourceAcc
-	 * @param targetAcc
+	 * 
+	 * @param sourceAcc accessor to the source image
+	 * @param targetAcc accessor to the target image
 	 */
 	public void applyTo(ImageAccessor sourceAcc, ImageAccessor targetAcc) {
 		Mapping invMap = this.getInverse(); // get inverse mapping

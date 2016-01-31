@@ -16,18 +16,23 @@ import java.awt.geom.Point2D;
 public class FourierDescriptorUniform extends FourierDescriptor {
 	
 	/**
-	 * Create a Fourier descriptor from a uniformly sampled polygon V
+	 * Creates a new Fourier descriptor from a uniformly sampled polygon V
 	 * with the maximum number of Fourier coefficient pairs.
-	 * @param V
+	 * 
+	 * @param V polygon
 	 */
 	public FourierDescriptorUniform(Point2D[] V) {
 		g = makeComplex(V);
 		G = DFT(g);
 	}
 	
-	/** 
-	 * Create a Fourier descriptor from a uniformly sampled polygon V
+	
+	/**
+	 * Creates a new Fourier descriptor from a uniformly sampled polygon V
 	 * with Mp coefficient pairs.
+	 * 
+	 * @param V polygon
+	 * @param Mp number of coefficient pairs
 	 */
 	public FourierDescriptorUniform(Point2D[] V, int Mp) {
 		g = makeComplex(V);

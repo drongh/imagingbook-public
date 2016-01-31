@@ -72,15 +72,16 @@ public abstract class IjUtils {
 		}
 	}
 	
+	
 	/**
-	 * Returns a (possibly empty) array of ImagePlus objects that are
+	 * Returns a (possibly empty) array of {@link ImagePlus} objects that are
 	 * sorted by their titles if the sortByTitle flag is set.
 	 * The image "exclude" (typically the current image) is not included 
 	 * in the returned array (pass null to exclude no image).
 	 * 
-	 * @param sortByTitle
-	 * @param exclude
-	 * @return
+	 * @param sortByTitle set {@code true} to return images sorted by title
+	 * @param exclude reference to an image to be excluded (may be {@code null})
+	 * @return a (possibly empty) array of {@link ImagePlus} objects
 	 */
 	public static ImagePlus[] getOpenImages(boolean sortByTitle, ImagePlus exclude) {
 		List<ImagePlus> imgList = new LinkedList<ImagePlus>();
@@ -136,9 +137,9 @@ public abstract class IjUtils {
 	 * {@code c} is treated as the column (horizontal) coordinate.
 	 * Use {@code show()} to display the resulting image.
 	 * 
-	 * @param title image title.
-	 * @param M 2D array.
-	 * @return
+	 * @param title image title
+	 * @param M 2D array
+	 * @return a new {@link ImagePlus} image
 	 */
 	public static ImagePlus createImage(String title, float[][] M) {
 		FloatProcessor fp = new FloatProcessor(M[0].length, M.length);
@@ -156,9 +157,10 @@ public abstract class IjUtils {
 	 * where {@code r} is treated as the row (vertical) coordinate and
 	 * {@code c} is treated as the column (horizontal) coordinate.
 	 * Use {@code show()} to display the resulting image.
-	 * @param title
-	 * @param M
-	 * @return
+	 * 
+	 * @param title the image title
+	 * @param M a 2D array holding the image data
+	 * @return a new {@link ImagePlus} instance
 	 */
 	public static ImagePlus createImage(String title, double[][] M) {
 		FloatProcessor fp = new FloatProcessor(M[0].length, M.length);

@@ -52,8 +52,8 @@ public abstract class HashFun {
 	 * Creates a new {@link HashFun} object initialized with seed. 
 	 * Has32Shift is used as the default type.
 	 * 
-	 * @param seed
-	 * @return
+	 * @param seed the seed
+	 * @return a new {@link HashFun} object
 	 */
 	public static HashFun create(int seed) {
 		return new Hash32Shift(seed);

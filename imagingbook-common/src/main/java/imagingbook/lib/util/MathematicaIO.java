@@ -51,7 +51,9 @@ public abstract class MathematicaIO {
 	/**
 	 * Generates a string holding the named definition
 	 * of a 1D float array for Mathematica in the form
-	 * name = {A[0], A[1], ...,A[m-1]};
+	 * {@code name = {A[0], A[1], ...,A[m-1]};}
+	 * 
+	 * @param name the name (Mathematica symbol) for the resulting array
 	 * @param A the array to be encoded (of length m).
 	 * @return a String holding the Mathematica definition.
 	 */
@@ -75,7 +77,9 @@ public abstract class MathematicaIO {
 	/**
 	 * Generates a string holding the named definition
 	 * of a 1D int array for Mathematica in the form
-	 * name = {A[0], A[1], ...,A[m-1]};
+	 * {@code name = {A[0], A[1], ...,A[m-1]};}
+	 * 
+	 * @param name the name (Mathematica symbol) for the resulting array
 	 * @param A the array to be encoded (of length m).
 	 * @return a String holding the Mathematica definition.
 	 */

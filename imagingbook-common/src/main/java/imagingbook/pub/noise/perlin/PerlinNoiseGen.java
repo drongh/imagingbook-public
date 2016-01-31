@@ -70,9 +70,10 @@ public abstract class PerlinNoiseGen {
 
 	/**
 	 * The number of frequency steps, given fmin and fmax.
-	 * @param fmin
-	 * @param fmax
-	 * @return
+	 * 
+	 * @param fmin min. frequency
+	 * @param fmax max. frequency
+	 * @return number of frequency steps
 	 */
 	public int getFrequencySteps(double fmin, double fmax) {	// TODO: should not be public!
 		int i = 0;

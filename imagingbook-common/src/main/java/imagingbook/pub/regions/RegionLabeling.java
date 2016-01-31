@@ -241,8 +241,11 @@ public abstract class RegionLabeling {
 	// --------- Iteration over region pixels -----------------------------------
 	
 	/**
-	 * @deprecated 
+	 * @deprecated
 	 * Use method getRegionPoints() of class {@link BinaryRegion} instead!
+	 * 
+	 * @param r binary region
+	 * @return an {@link Iterable} to iterate over all region points
 	 */
 	public Iterable<Point> getRegionPoints(final BinaryRegion r) {
 		return r.getRegionPoints();
@@ -408,7 +411,8 @@ public abstract class RegionLabeling {
 		
 		/**
 		 * Returns the centroid of this region as a 2D point.
-		 * @deprecated Use {@link getCenterPoint} or {@link getXc} and {@link getYc} instead.
+		 * Use {@link getCenterPoint} or {@link getXc} and {@link getYc} instead.
+		 * @deprecated
 		 * @return the centroid of this region
 		 */
 		public Point2D getCenter() {
@@ -419,10 +423,12 @@ public abstract class RegionLabeling {
 				return new Point2D.Double(xc, yc);
 		}
 		
+		
 		/**
 		 * Returns the centroid of this region as a 2D point.
+		 * See also {@link getXc}, {@link getYc}.
+		 * 
 		 * @return the centroid of this region
-		 * @see {@link getXc}, {@link getYc}
 		 */
 		public Point2D getCenterPoint() {
 			//TODO: rename to getCenterPoint, replace by returning array, make getters for xc, yc
@@ -447,8 +453,13 @@ public abstract class RegionLabeling {
 			};
 		}
 		
-		/** Use this method to add a single pixel to this region. Updates summation
+
+		/**
+		 * Use this method to add a single pixel to this region. Updates summation
 		 * and boundary variables used to calculate various region statistics.
+		 * 
+		 * @param u x-position
+		 * @param v y-position
 		 */
 		protected void addPixel(int u, int v) {
 			size = size + 1;
