@@ -6,11 +6,12 @@
 		<artifactId>imagingbook</artifactId>
 		<version>FIXED</version>
 	</parent>
-	<artifactId>imagingbook-plugins-all</artifactId>
+	<!-- <artifactId>imagingbook-plugins-all</artifactId> -->
+	<artifactId>BurgerBurgeAll_plugins</artifactId>
 	<packaging>jar</packaging>
-  	<!-- <version>1.0-SNAPSHOT</version> -->
+  	<version>1.0-SNAPSHOT</version>
   	<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
-  	<version>${imagingbook.version}</version> 	
+  	<!-- <version>${imagingbook.version}</version> -->	
   	<dependencies>
 		<dependency>
 			<groupId>com.imagingbook</groupId>
@@ -23,6 +24,7 @@
 		<!-- <outputDirectory>${project.build.directory}/ImageJ/plugins</outputDirectory>  -->
 		<outputDirectory>${project.basedir}/ImageJ/plugins</outputDirectory>
 		<plugins>
+			<!-- we rename the target jar and place it in another subdir -->
 			<!-- http://stackoverflow.com/questions/6689511/maven-how-to-place-the-output-jar-into-another-folder -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -30,7 +32,7 @@
 				<version>2.3.1</version>
 				<configuration>
 					<!-- <outputDirectory>${project.build.directory}/ImageJ/jars</outputDirectory> -->
-					<!-- <finalName>${project.name}_${project.version}</finalName> -->
+					<!-- <finalName>${project.name}_XXX_${project.version}</finalName> -->
 				</configuration>
 			</plugin>
 			
