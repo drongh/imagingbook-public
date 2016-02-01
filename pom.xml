@@ -3,9 +3,11 @@
   <groupId>com.imagingbook</groupId>
   <artifactId>imagingbook</artifactId>
   <!-- https://issues.apache.org/jira/browse/MNG-624 -->
-  <version>FIXED</version> <!-- <version>0.0.1-SNAPSHOT</version> -->
+  <!-- <version>FIXED</version> --> <!-- <version>0.0.1-SNAPSHOT</version> -->
+  <version>${imagingbook.version}</version>
   
   <properties>
+  	<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
   	<imagingbook.version>1.0-SNAPSHOT</imagingbook.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
