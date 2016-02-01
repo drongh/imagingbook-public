@@ -51,7 +51,7 @@
 		                  <version>1.50e</version>
 		                  <overWrite>false</overWrite>
 		                  <outputDirectory>${project.basedir}/ImageJ</outputDirectory>
-		                  <!-- <destFileName>optional-new-name.jar</destFileName>  -->
+		                  <destFileName>ij.jar</destFileName>
 		                </artifactItem>
 		                <artifactItem>
 		                  <groupId>com.imagingbook</groupId>
