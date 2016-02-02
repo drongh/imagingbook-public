@@ -12,6 +12,7 @@
   	<version>1.0-SNAPSHOT</version>
   	<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
   	<!-- <version>${imagingbook.version}</version> -->	
+  	
   	<dependencies>
 		<dependency>
 			<groupId>com.imagingbook</groupId>
@@ -20,6 +21,7 @@
 			<version>${imagingbook-common.version}</version>  <!-- works, no problem! -->
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<!-- <directory>${project.basedir}/target</directory> -->
 		<!-- <outputDirectory>${project.build.directory}/ImageJ/plugins</outputDirectory>  -->
@@ -77,5 +79,21 @@
 			<!-- end of copy -->
 		</plugins>
 	</build>
+	
+	<reporting>
+  	<!-- create JavaDoc (see https://maven.apache.org/plugins/maven-javadoc-plugin/usage.html) -->
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.10.3</version>
+		</plugin>
+		<plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-project-info-reports-plugin</artifactId>
+           <version>2.8</version>
+   		</plugin>
+	</plugins>
+  </reporting>
 
 </project>
