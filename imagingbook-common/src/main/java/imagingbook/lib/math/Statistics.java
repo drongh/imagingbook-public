@@ -10,7 +10,7 @@
 
 package imagingbook.lib.math;
 
-import org.apache.commons.math3.linear.MatrixUtils;
+//import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.stat.correlation.Covariance;
 
 

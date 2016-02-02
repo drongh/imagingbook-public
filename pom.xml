@@ -59,6 +59,7 @@
 	     </plugins>
 	  </pluginManagement>
   </build>
+  
 	<reporting>
   	<!-- create JavaDoc (see https://maven.apache.org/plugins/maven-javadoc-plugin/usage.html) -->
 	<plugins>
@@ -74,4 +75,5 @@
    		</plugin>
 	</plugins>
   </reporting>
+  
 </project>
