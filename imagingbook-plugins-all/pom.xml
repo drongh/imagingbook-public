@@ -16,7 +16,8 @@
 		<dependency>
 			<groupId>com.imagingbook</groupId>
 			<artifactId>imagingbook-common</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<!-- <version>1.0-SNAPSHOT</version> -->
+			<version>${imagingbook-common.version}</version>  <!-- works, no problem! -->
 		</dependency>
 	</dependencies>
 	<build>
