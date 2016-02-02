@@ -16,12 +16,12 @@
   <description>Java source code for image processing books by Burger and Burge</description>
   <modules>
   	<module>imagingbook-common</module>
-  	<module>BurgerBurgeAll_plugins</module>
-  	<module>BurgerBurgeDe2_plugins</module>
-  	<module>BurgerBurgeDe3_plugins</module>
-  	<module>BurgerBurgeEn1_plugins</module>
-  	<module>BurgerBurgeEn2_plugins</module>
-  	<module>BurgerBurgeEn3_plugins</module>
+  	<module>imagingbook-plugins-all</module>
+  	<module>imagingbook-plugins-de2</module>
+  	<module>imagingbook-plugins-de3</module>
+  	<module>imagingbook-plugins-en1</module>
+  	<module>imagingbook-plugins-en2</module>
+  	<module>imagingbook-plugins-en3</module>
   </modules>
   <repositories>
   	<repository>
@@ -59,4 +59,5 @@
 	     </plugins>
 	  </pluginManagement>
   </build>
+
 </project>
