@@ -35,10 +35,15 @@
         	<!-- <reportOutputDirectory>${project.basedir}/www</reportOutputDirectory> -->  <!-- works! -->
         	<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> --> <!-- works! -->
         	<!-- <reportOutputDirectory>${project.parent.basedir}</reportOutputDirectory> --> <!-- works! http://stackoverflow.com/a/25290513 -->
+        	
         	<reportOutputDirectory>${imagingbook.basedir}</reportOutputDirectory>
         	<destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir>
-			<show>private</show>
+        	
+			<show>protected</show>
 			<nohelp>true</nohelp>
+			<linksource>true</linksource>
+			<author>false</author>
+			<verbose>true</verbose>
         </configuration>
       </plugin>
     </plugins>
