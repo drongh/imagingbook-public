@@ -11,6 +11,8 @@
   	<imagingbook-common.version>1.0-SNAPSHOT</imagingbook-common.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir>
+    <imagingbook.webdir>web-submodule</imagingbook.webdir>
   </properties>
   <packaging>pom</packaging>
   <name>ImagingBook</name>

@@ -23,6 +23,7 @@
   </dependencies>
  
  	<!-- https://maven.apache.org/plugins/maven-javadoc-plugin/usage.html -->
+ 	<!-- mvn javadoc:javadoc -->
    <build>
     <plugins>
       <plugin>
@@ -30,11 +31,32 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.10.3</version>
         <configuration>
-<!--           <show>private</show> -->
-          <nohelp>true</nohelp>
+<!--         	<outputDirectory>${project.build.directory}/apidocsXXXX</outputDirectory> -->
+        	<!-- <reportOutputDirectory>${project.basedir}/www</reportOutputDirectory> -->  <!-- works! -->
+        	<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> --> <!-- works! -->
+        	<!-- <reportOutputDirectory>${project.parent.basedir}</reportOutputDirectory> --> <!-- works! http://stackoverflow.com/a/25290513 -->
+        	<reportOutputDirectory>${imagingbook.basedir}</reportOutputDirectory>
+        	<destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir>
+			<show>private</show>
+			<nohelp>true</nohelp>
         </configuration>
       </plugin>
     </plugins>
-  </build> 
+  </build>
+  
+<!--   <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.3</version>
+        <configuration>
+          <reportOutputDirectory>${project.reporting.outputDirectory}/myoutput</reportOutputDirectory>
+          <destDir>apidocsXXX</destDir>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting> -->
+  
 
 </project>
