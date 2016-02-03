@@ -87,9 +87,8 @@ public class HoughTransformLines {
 		process(points);
 	}
 
-	/** Non-public constructor used by public constructors (to set up all final members
-	 * variables.
-	 */
+
+	// Non-public constructor used by public constructors (to set up all final members variables.
 	private HoughTransformLines(int M, int N, Parameters params) {
 		this.params = (params == null) ? new Parameters() : params;
 		this.M = M;

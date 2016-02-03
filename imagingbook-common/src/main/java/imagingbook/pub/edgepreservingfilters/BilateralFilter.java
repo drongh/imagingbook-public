@@ -40,7 +40,7 @@ public class BilateralFilter extends GenericFilter {
 		 * Create a default parameter object.
 		 * @param sigmaD Sigma (width) of domain filter
 		 * @param sigmaR Sigma (width) of range filter
-		 * @return
+		 * @return a new parameter object
 		 */
 		static Parameters create(double sigmaD, double sigmaR) {
 			Parameters p = new Parameters();

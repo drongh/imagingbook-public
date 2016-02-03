@@ -103,7 +103,7 @@ public abstract class PerlinNoiseGen {
 
 	/**
 	 * Fast floor method (by Gustavson?)
-	 * @param x
+	 * @param x argument
 	 * @return floor(x), works for pos. and neg. x.
 	 */
 	int ffloor(double x) {

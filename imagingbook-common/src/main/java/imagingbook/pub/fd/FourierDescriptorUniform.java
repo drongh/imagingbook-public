@@ -41,16 +41,20 @@ public class FourierDescriptorUniform extends FourierDescriptor {
 	
 	// -------------------------------------------------------------------
 	
+
 	/**
 	 * DFT with the resulting spectrum (signal, if inverse) of the same length
 	 * as the input vector g. Not using sin/cos tables.
+	 * 
+	 * @param g signal vector
+	 * @return DFT spectrum
 	 */
 	private Complex[] DFT(Complex[] g) {
 		int M = g.length;
 //		double[] cosTable = makeCosTable(M);	// cosTable[m] == cos(2*pi*m/M)
 //		double[] sinTable = makeSinTable(M);
 		Complex[] G = new Complex[M];
-		double s = 1.0/M; //common scale factor (fwd/inverse differ!)
+		double s = 1.0 / M; //common scale factor (fwd/inverse differ!)
 		for (int m = 0; m < M; m++) {
 			double Am = 0;
 			double Bm = 0;
@@ -68,9 +72,13 @@ public class FourierDescriptorUniform extends FourierDescriptor {
 		return G;
 	}
 	
-	/** 
+
+	/**
 	 * As above, but the length P of the resulting spectrum (signal, if inverse) 
 	 * is explicitly specified.
+	 * @param g signal vector
+	 * @param P length of the resulting  DFT spectrum
+	 * @return DFT spectrum
 	 */
 	private Complex[] DFT(Complex[] g, int P) {
 		int M = g.length;

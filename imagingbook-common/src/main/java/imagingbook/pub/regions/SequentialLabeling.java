@@ -134,6 +134,9 @@ public class SequentialLabeling extends RegionLabeling {
 	 *  not particularly efficient, since the merging of sets is done by relabeling 
 	 *  the entire replacement table for each pair of nodes. Still fast enough even 
 	 *  for large and complex images.
+	 *  
+	 *  @param size size of the label set
+	 *  @return replacement table
 	 */
 	int[] resolveCollisions(int size) {
 		

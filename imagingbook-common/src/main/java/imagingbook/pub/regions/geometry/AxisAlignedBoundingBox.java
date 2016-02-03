@@ -70,8 +70,8 @@ public class AxisAlignedBoundingBox {
 	/**
 	 * Calculates the orientation of major axis.
 	 * TODO: move this somewhere else (into class BinaryRegion)
-	 * @param r
-	 * @return
+	 * @param r binary region
+	 * @return orientation of the major axis (angle in radians)
 	 */
 	private double getRegionOrientation(BinaryRegion r) {
 		final double xc = r.getXc();

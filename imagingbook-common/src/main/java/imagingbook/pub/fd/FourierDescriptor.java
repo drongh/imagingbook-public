@@ -202,9 +202,15 @@ public abstract class FourierDescriptor implements Cloneable {
 		return getReconstructionPoint(t, -Mp, Mp);
 	}
 
+
 	/**
 	 * Reconstructs a single spatial point from this FD using
 	 * coefficients [mm,...,mp] = [m-,...,m+] at the fractional path position t in [0,1].
+	 * 
+	 * @param t path position
+	 * @param mm most negative frequency index
+	 * @param mp most positive frequency index
+	 * @return single contour point
 	 */
 	private Complex getReconstructionPoint(double t, int mm, int mp) {
 		double x = G[0].re();
@@ -262,10 +268,16 @@ public abstract class FourierDescriptor implements Cloneable {
 		return p1.add(p2);
 	}
 
+
 	/**
 	 * Returns the spatial point reconstructed from a single
 	 * DFT coefficient 'Gm' with frequency 'm' at 
 	 * position 't' in [0,1].
+	 * 
+	 * @param Gm single DFT coefficient
+	 * @param m frequency index
+	 * @param t contour position
+	 * @return reconstructed point
 	 */
 	private Complex getReconstructionPoint(Complex Gm, int m, double t) {
 		double wm = 2 * Math.PI * m;
@@ -405,8 +417,9 @@ public abstract class FourierDescriptor implements Cloneable {
 	/**
 	 * Normalizes the L2 norm of the sub-vector (G_{-Mp}, ..., G_{Mp}),
 	 * keeps G_0 untouched.
-	 * @param Mp
-	 * @return
+	 * 
+	 * @param Mp most positive/negative frequency index
+	 * @return normalized coefficient sub-vector
 	 */
 	private double makeScaleInvariant(int Mp) {
 		double s = 0;
@@ -473,8 +486,8 @@ public abstract class FourierDescriptor implements Cloneable {
 	/**
 	 * Apply a particular start-point phase shift
 	 * 
-	 * @param phi
-	 * @param Mp
+	 * @param phi start point phase
+	 * @param Mp most positive/negative frequency index
 	 */
 	private void shiftStartPointPhase(double phi, int Mp) {
 		Mp = Math.min(Mp, G.length/2);

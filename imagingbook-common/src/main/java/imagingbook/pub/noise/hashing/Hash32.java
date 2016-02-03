@@ -38,7 +38,8 @@ public abstract class Hash32 extends HashFun {
 	 * "Hashes" an <tt>int</tt> key to a "pseudo-random" <tt>int</tt> value 
 	 * in [-2147483648, 2147483647].
 	 * This method is supposed to be overridden by subclasses if needed.
-	 * @param key
+	 * 
+	 * @param key key for random generator
 	 * @return A integer value in [-2147483648, 2147483647].
 	 */
 	abstract int hashInt(int key);

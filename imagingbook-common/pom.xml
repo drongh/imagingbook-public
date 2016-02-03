@@ -22,70 +22,19 @@
 	</dependency>
   </dependencies>
  
- 
-   <!-- http://svn.apache.org/repos/asf/maven/sandbox/trunk/site/cookbook/attach-source-javadoc/pom.xml -->
+ 	<!-- https://maven.apache.org/plugins/maven-javadoc-plugin/usage.html -->
    <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>2.0.4</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.3</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-
     <plugins>
-      <!-- START SNIPPET: source -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- END SNIPPET: source -->
-      <!-- START SNIPPET: javadoc -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
+        <version>2.10.3</version>
+        <configuration>
+          <show>private</show>
+          <nohelp>true</nohelp>
+        </configuration>
       </plugin>
-      <!-- END SNIPPET: javadoc -->
     </plugins>
-  </build>
-  
-  <reporting>
-  	<!-- create JavaDoc (see https://maven.apache.org/plugins/maven-javadoc-plugin/usage.html) -->
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-javadoc-plugin</artifactId>
-			<version>2.10.3</version>
-		</plugin>
-		<plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-project-info-reports-plugin</artifactId>
-           <version>2.8</version>
-   		</plugin>
-	</plugins>
-  </reporting>
+  </build> 
 
 </project>

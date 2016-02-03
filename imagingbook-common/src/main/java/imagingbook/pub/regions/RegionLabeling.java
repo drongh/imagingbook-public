@@ -275,6 +275,8 @@ public abstract class RegionLabeling {
 		 * Search from position (uCur, vCur) for the next valid region pixel.
 		 * Return the next position as a Point or null if no such point can be found.
 		 * Don't assume that (uCur, vCur) is a valid region pixel!
+		 * 
+		 * @return the next point
 		 */
 		private Point findNext() {
 			// start search for next region pixel at (u,v):

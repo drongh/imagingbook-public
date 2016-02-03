@@ -62,10 +62,9 @@ public class PerlinNoiseGen2d extends PerlinNoiseGen {
 	}
 	
 	/**
-	 * @param px discrete position px.
-	 * @param px discrete position py.
-	 * @return A pseudo-random gradient vector for 
-	 * the discrete position (px,py).
+	 * @param px discrete horiz. position
+	 * @param py discrete vert. position
+	 * @return A pseudo-random gradient vector for the discrete position (px,py).
 	 */
 	double[] gradient(int px, int py) {
 		double[] g = hashFun.hash(px,py);	// hash() always returns a new double[] in [0,1]

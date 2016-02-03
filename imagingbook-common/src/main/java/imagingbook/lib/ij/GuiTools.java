@@ -29,7 +29,7 @@ public class GuiTools {
 	 * Returns a reference to the chosen image (ImagePlus) or
 	 * null, if the dialog was canceled.
 	 * 
-	 * @autor W. Burger
+	 * @author W. Burger
 	 * @version 2012/02
 	 */
 	static String defaultTitle = "Choose image";
