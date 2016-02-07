@@ -9,7 +9,6 @@
   <description>Java source code for image processing books by W. Burger and M.J. Burge</description>
   <modules>
   	<module>imagingbook-common</module>
-  	<module>imagingbook-plugins-all</module>
   	<module>imagingbook-plugins-de2</module>
   	<module>imagingbook-plugins-de3</module>
   	<module>imagingbook-plugins-en1</module>

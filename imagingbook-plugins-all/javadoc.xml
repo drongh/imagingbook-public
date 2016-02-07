@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="javadoc">
-    <target name="javadoc">
-        <javadoc access="public" author="true" classpath="C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\target\classes;\imagingbook-plugins-all\target\test-classes;C:\Maven\repository\org\apache\commons\commons-math3\3.5\commons-math3-3.5.jar;C:\Maven\repository\net\imagej\ij\1.50e\ij-1.50e.jar;C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\target\test-classes;C:\Program Files\Java\jdk1.8.0_65\lib\tools.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="Synthetic_Noise,Histograms_Statistics,Binary_Regions,ImageJ_Introduction,Edges_Contours,Image_Matching,Point_Operations,Test,Spectral_Techniques,ImageJ_Examples,Color_Quantization,Morphological_Filters,Color_Images,Filters,Geometric_Operations,SIFT,Automatic_Thresholding,Colorimetric_Color_Spaces,Color_Filters,Hough_Transform,Color_Edges,Corner_Detection,ImageJ_Short_Reference,Lucas_Kanade,Pixel_Interpolation,Edge_Preserving_Smoothing,Fourier_Shape_Descriptors" source="1.8" sourcepath="src/main/java;src/main/resources" splitindex="true" use="true" version="true"/>
-    </target>
-</project>
