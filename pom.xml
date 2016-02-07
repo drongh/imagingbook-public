@@ -4,17 +4,6 @@
   <artifactId>imagingbook</artifactId>
   <!-- https://issues.apache.org/jira/browse/MNG-624 -->
   <version>FIXED</version> <!-- <version>0.0.1-SNAPSHOT</version> -->
-  
-  <properties>
-  	<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
-  	<imagingbook.version>1.0-SNAPSHOT</imagingbook.version>
-  	<imagingbook-common.version>1.0-SNAPSHOT</imagingbook-common.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir>
-    <imagingbook.webdir>web-submodule</imagingbook.webdir>
-    <myproject.root>${basedir}</myproject.root>   <!-- http://stackoverflow.com/a/8848129 -->
-  </properties>
   <packaging>pom</packaging>
   <name>ImagingBook</name>
   <description>Java source code for image processing books by Burger and Burge</description>
@@ -27,6 +16,18 @@
   	<module>imagingbook-plugins-en2</module>
   	<module>imagingbook-plugins-en3</module>
   </modules>
+    
+  <properties>
+  	<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
+  	<imagingbook.version>1.0-SNAPSHOT</imagingbook.version>
+  	<imagingbook-common.version>1.0-SNAPSHOT</imagingbook-common.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir>
+    <imagingbook.webdir>web-submodule</imagingbook.webdir>
+    <myproject.root>${basedir}/..</myproject.root>   <!-- http://stackoverflow.com/a/8848129 -->
+  </properties>
+  
   <repositories>
   	<repository>
     	<id>imagej.public</id>
@@ -63,8 +64,8 @@
 	     </plugins>
 	  </pluginManagement>
 	  
-	  <plugins>
-	      <plugin>
+	  <plugins>		
+	    <plugin>
 	      <!-- Javadoc generation -->
 	        <groupId>org.apache.maven.plugins</groupId>
 	        <artifactId>maven-javadoc-plugin</artifactId>
