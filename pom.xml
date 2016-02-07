@@ -37,7 +37,8 @@
     	<url>http://maven.imagej.net/content/groups/public</url>
  	 </repository>
 	</repositories>
-	  <dependencies>
+
+  <dependencies>
   	<dependency>
   		<groupId>net.imagej</groupId>
   		<artifactId>ij</artifactId>
