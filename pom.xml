@@ -6,7 +6,7 @@
   <version>FIXED</version> <!-- <version>0.0.1-SNAPSHOT</version> -->
   <packaging>pom</packaging>
   <name>ImagingBook</name>
-  <description>Java source code for image processing books by Burger and Burge</description>
+  <description>Java source code for image processing books by W. Burger and M.J. Burge</description>
   <modules>
   	<module>imagingbook-common</module>
   	<module>imagingbook-plugins-all</module>
@@ -44,15 +44,8 @@
   		<artifactId>ij</artifactId>
   		<version>1.50e</version>
   	</dependency>
-  	<!-- <dependency> -->
-  		<!-- from http://stackoverflow.com/questions/3356716/com-suntoolsjar1-4-2-missing-when-running-perform-eclipse-in-roo -->
-  		<!-- <groupId>com.sun</groupId> -->
-  		<!-- <artifactId>tools</artifactId> -->
-  		<!-- <version>1.4.2</version> -->
-  		<!-- <scope>system</scope> -->
-        <!-- <systemPath>C:/Program Files/Java/jdk1.8.0_65/lib/tools.jar</systemPath> -->
-  	<!-- </dependency> -->
-	  </dependencies>
+  </dependencies>
+  
   <build>
 	  <pluginManagement>
 	     <plugins>
@@ -77,7 +70,6 @@
 	        <configuration>      	
 	        	<!-- <reportOutputDirectory>${imagingbook.basedir}</reportOutputDirectory> -->
 	        	<!-- <destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir> --> 
-	        	
 	        	<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> -->
 	        	<reportOutputDirectory>${myproject.root}</reportOutputDirectory>
 	        	<destDir>${imagingbook.webroot}/javadoc/${project.name}</destDir>
