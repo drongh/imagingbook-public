@@ -21,11 +21,15 @@
   	<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
   	<imagingbook.version>1.0-SNAPSHOT</imagingbook.version>
   	<imagingbook-common.version>1.0-SNAPSHOT</imagingbook-common.version>
+  	
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir>
-    <imagingbook.webdir>web-submodule</imagingbook.webdir>
-    <myproject.root>${basedir}/..</myproject.root>   <!-- http://stackoverflow.com/a/8848129 -->
+    
+    <!-- settings for JavaDoc generation: -->
+    <myproject.root>${basedir}/..</myproject.root>   <!-- property is overwritten in submodule POMs! http://stackoverflow.com/a/8848129 -->
+    <imagingbook.webroot>imagingbook-website</imagingbook.webroot>
+    <!-- <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir> -->
+    <!-- <imagingbook.webdir>web-submodule</imagingbook.webdir> -->
   </properties>
   
   <repositories>
@@ -76,7 +80,7 @@
 	        	
 	        	<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> -->
 	        	<reportOutputDirectory>${myproject.root}</reportOutputDirectory>
-	        	<destDir>webXXX/javadoc/${project.name}</destDir> 
+	        	<destDir>${imagingbook.webroot}/javadoc/${project.name}</destDir>
 	        	    	
 				<show>protected</show>
 				<nohelp>true</nohelp>
