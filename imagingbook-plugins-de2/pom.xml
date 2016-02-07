@@ -11,6 +11,7 @@
   	
 	<properties>
 		<myproject.root>${basedir}/../..</myproject.root>
+		<!-- <javadoc-doctitle>ImageJ Plugins for Burger/Burge (DE2)</javadoc-doctitle> -->
   	</properties>
   	
     <dependencies>
