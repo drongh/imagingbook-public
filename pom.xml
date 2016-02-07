@@ -13,6 +13,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir>
     <imagingbook.webdir>web-submodule</imagingbook.webdir>
+    <myproject.root>${basedir}</myproject.root>   <!-- http://stackoverflow.com/a/8848129 -->
   </properties>
   <packaging>pom</packaging>
   <name>ImagingBook</name>
@@ -69,8 +70,13 @@
 	        <artifactId>maven-javadoc-plugin</artifactId>
 	        <version>2.10.3</version>
 	        <configuration>      	
-	        	<reportOutputDirectory>${imagingbook.basedir}</reportOutputDirectory>
-	        	<destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir>     	
+	        	<!-- <reportOutputDirectory>${imagingbook.basedir}</reportOutputDirectory> -->
+	        	<!-- <destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir> --> 
+	        	
+	        	<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> -->
+	        	<reportOutputDirectory>${myproject.root}</reportOutputDirectory>
+	        	<destDir>web/javadoc/${project.name}</destDir> 
+	        	    	
 				<show>protected</show>
 				<nohelp>true</nohelp>
 				<linksource>true</linksource>
