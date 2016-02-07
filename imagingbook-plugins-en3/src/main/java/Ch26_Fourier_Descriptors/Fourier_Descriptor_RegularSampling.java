@@ -29,8 +29,9 @@ import java.util.List;
 
 /**
  * This plugin corresponds to the Fourier descriptor code example in the book's implementation 
- * section (Program 6.1 in UtICS Vol. 3).
- * The input image ip is assumed to contain a binary image. The class 'RegionContourLabeling'
+ * section (Program 26.1 in 2nd edition).
+ * The input image ip is assumed to contain a binary image. The class 
+ * {@link RegionContourLabeling}
  * is used to find connected regions. Then the list of outer contours is retrieved and the 
  * longest contour is assigned to 'V' as an array of type 'Point2D'. Then the contour 'V' is 
  * used to create a Fourier descriptor with 15 coefficient pairs. Alternatively, we could have 
