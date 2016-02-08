@@ -48,7 +48,8 @@
     <!-- <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir> -->
     <!-- <imagingbook.webdir>web-submodule</imagingbook.webdir> -->
     
-    <javadoc-doctitle>${project.name} (${project.version})</javadoc-doctitle>
+    <javadoc-doctitle>${project.name} (${project.version})</javadoc-doctitle> <!-- overwrite in submodules if needed -->
+    
   </properties>
   
   <repositories>
