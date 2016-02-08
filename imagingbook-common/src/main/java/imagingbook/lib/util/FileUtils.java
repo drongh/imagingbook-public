@@ -89,15 +89,17 @@ public abstract class FileUtils {
 	 * 
 	 * InputStream strm = getResourceStream(C.class, "resources/lenna.jpg");
 	 * 
-	 * Use this method to access resources stored in a JAR file!
+	 * This should access resources stored in the file system or inside a JAR file!
 	 * 
-	 * @param c anchor class 
-	 * @param name name of the resource to be found
-	 * @return a stream for reading the resource or null if not found.
+	 * @param clazz anchor class 
+	 * @param relativePath Path to the resource to be found (relative to the location of {@literal clazz}.
+	 * @return A stream for reading the resource or null if not found.
 	 */
-	public static InputStream getResourceStream(Class<?> c, String name) {
-		return c.getResourceAsStream(name);
+	public static InputStream getResourceStream(Class<?> clazz, String relativePath) {
+		return clazz.getResourceAsStream(relativePath);
 	}
+	
+	// ----------------------------------------------------------------
 
 	public static void printClassPath() {
 		ClassLoader cl = ClassLoader.getSystemClassLoader();
@@ -107,6 +109,8 @@ public abstract class FileUtils {
 		}
 
 	}
+	
+	// ----------------------------------------------------------------
 	
 	/**
 	 * Checks 'by name' if a particular class exists.
@@ -150,6 +154,7 @@ public abstract class FileUtils {
 	 * Use this method to obtain the paths to all files in a directory located
 	 * relative to the specified class. This should work in an ordinary file system
 	 * as well as a (possibly nested) JAR file.
+	 * TODO: change to return empty array instead of null.
 	 * 
 	 * @param theClass class whose source location specifies the root 
 	 * @param relPath path relative to the root
@@ -160,7 +165,7 @@ public abstract class FileUtils {
 		try {
 			uri = theClass.getResource(relPath).toURI();
 			//IJ.log("uri = " + uri.getPath().toString());
-		} catch (URISyntaxException e) {
+		} catch (Exception e) {
 			System.err.println(e);
 			return null;
 		}
@@ -228,6 +233,8 @@ public abstract class FileUtils {
 		return rlst.toArray(new Path[0]);
 	}
 	
+	
+	// ----------------------------------------------------------------
 	
 	/**
 	 * Finds the manifest (from META-INF/MANIFEST.MF) of the JAR file

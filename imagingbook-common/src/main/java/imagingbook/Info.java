@@ -19,17 +19,17 @@ import imagingbook.lib.util.FileUtils;
 public abstract class Info {
 	
 	/**
-	 * Reads version information from the MANIFEST.MF file from which
-	 * this class was loaded. 
+	 * Reads version information from the MANIFEST.MF file of the JAR file from
+	 * which this class was loaded. 
 	 * 
 	 * @return A string with the version information. 
-	 * The string "unknown" is returned if the class was not loaded from a JAR file or if 
+	 * The string "UNKNOWN" is returned if the class was not loaded from a JAR file or if 
 	 * the version information could not be determined.
 	 */
 	public static String getVersionInfo() {
 		Manifest mf = FileUtils.getJarManifest(Info.class);
 		if (mf == null) {
-			return "unknown";
+			return "UNKNOWN";
 		}
 		IJ.log("listing attributes");
 		Attributes attr = mf.getMainAttributes();
@@ -45,9 +45,10 @@ public abstract class Info {
 	
 	/**
 	 * Defined {@literal public} to show in JavaDoc.
+	 * Obsolete (reset to {@literal private} again). 
 	 * @deprecated
 	 */
-	public static final int VERSION = 99999999;	
+	private static final int VERSION = 99999999;	
 	
 	/**
 	 * This method is deprecated, version dates are not maintained any longer. Use
