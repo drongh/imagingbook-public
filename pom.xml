@@ -50,6 +50,10 @@
     
     <javadoc-doctitle>${project.name} (${project.version})</javadoc-doctitle> <!-- overwrite in submodules if needed -->
     
+    <!-- https://itaffinity.wordpress.com/2014/02/25/maven-create-a-simple-build-number/ -->
+    <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+    <buildDate>${maven.build.timestamp}</buildDate>
+    
   </properties>
   
   <repositories>
@@ -117,7 +121,25 @@
 				<!-- <detectOfflineLinks>true</detectOfflineLinks> -->
 	        </configuration>
 	      </plugin>
-      </plugins>
+      
+      
+      <plugin>  <!-- add more properties to MANIFEST file -->
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-jar-plugin</artifactId>
+	    <version>2.1</version>
+	    <configuration>
+	      <archive>
+	        <manifest>
+	          <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+	        </manifest>
+	        <manifestEntries>
+                <Build-Date>${buildDate}</Build-Date>
+            </manifestEntries>
+	      </archive>
+	    </configuration>
+	  </plugin>
+	  
+ 	 </plugins>
   </build>
   
   <reporting>

@@ -8,22 +8,58 @@
  *  
  *******************************************************************************/
 
-
 package imagingbook;
+
+import java.util.jar.Attributes;
+import java.util.jar.Manifest;
+
+import ij.IJ;
+import imagingbook.lib.util.FileUtils;
 
 public abstract class Info {
 	
-	public static final int VERSION = 20151113;	// made public to show in JavaDoc
+	/**
+	 * Reads version information from the MANIFEST.MF file from which
+	 * this class was loaded. 
+	 * 
+	 * @return A string with the version information. 
+	 * The string "unknown" is returned if the class was not loaded from a JAR file or if 
+	 * the version information could not be determined.
+	 */
+	public static String getVersionInfo() {
+		Manifest mf = FileUtils.getJarManifest(Info.class);
+		if (mf == null) {
+			return "unknown";
+		}
+		IJ.log("listing attributes");
+		Attributes attr = mf.getMainAttributes();
+		String version = null;
+		String buildDate = null;
+		try {
+			version = attr.getValue("Implementation-Version");
+			buildDate = attr.getValue("Build-Date");
+		} catch (IllegalArgumentException e) { }
+		return "version " + version + " build " + buildDate;
+	}
+	
 	
 	/**
+	 * Defined {@literal public} to show in JavaDoc.
+	 * @deprecated
+	 */
+	public static final int VERSION = 99999999;	
+	
+	/**
+	 * This method is deprecated, version dates are not maintained any longer. Use
+	 * the method {@link getVersionInfo} to retrieve the Maven build version instead.
+	 * 
 	 * @return The current version of the 'imagingbook' library as an 8-digit integer,
 	 * eg 20130721 (in YYYYMMDD-format).
+	 * @deprecated
 	 */
 	public static int getVersion() {
 		return VERSION;
 	}
-	
-	private Info() {
-	}
+
 
 }

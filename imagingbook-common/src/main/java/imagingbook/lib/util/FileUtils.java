@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.jar.Manifest;
 import java.util.stream.Stream;
 
 import ij.IJ;
@@ -225,5 +226,30 @@ public abstract class FileUtils {
 		}
 		walk.close();
 		return rlst.toArray(new Path[0]);
+	}
+	
+	
+	/**
+	 * Finds the manifest (from META-INF/MANIFEST.MF) of the JAR file
+	 * from which {@literal clazz} was loaded.
+	 * 
+	 * See: http://stackoverflow.com/a/1273432
+	 * @param clazz A class in the JAR file of interest.
+	 * @return A {@link Manifest} object or {@literal null} if {@literal clazz}
+	 * was not loaded from a JAR file.
+	 */
+	public static Manifest getJarManifest(Class<?> clazz) {
+		String className = clazz.getSimpleName() + ".class";		
+		String classPath = clazz.getResource(className).toString();
+		IJ.log("classPath = " + classPath);
+		if (!classPath.startsWith("jar")) { // Class not from JAR
+		  return null;
+		}
+		String manifestPath = classPath.substring(0, classPath.lastIndexOf("!") + 1) + "/META-INF/MANIFEST.MF";
+		Manifest manifest = null;
+		try {
+			manifest = new Manifest(new URL(manifestPath).openStream());
+		} catch (IOException ignore) { }
+		return manifest;
 	}
 }
