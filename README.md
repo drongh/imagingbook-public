@@ -1,6 +1,6 @@
 # ImagingBook
 
-This repository contains Java source code accompanying the 
+This repository contains **Java source code** accompanying the 
 **digital image processing books** by W. Burger & M. J. Burge, 
 published by Springer. 
 Please visit www.imagingbook.com for more information.
