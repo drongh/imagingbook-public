@@ -23,4 +23,6 @@ Please visit www.imagingbook.com for more information.
 
 
 
-**NOTE:** This repository is experimental and possibly inconsistent! See http://sourceforge.net/projects/imagingbook/ for the official release.
+### NOTE:
+
+This repository is experimental and possibly inconsistent! See http://sourceforge.net/projects/imagingbook/ for the official release.
