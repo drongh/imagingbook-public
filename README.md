@@ -9,6 +9,7 @@ Please visit www.imagingbook.com for more information.
 
 * [imagingbook-common](http://imagingbook.bitbucket.org/javadoc/imagingbook-common) (ImagingBook common library)
 * [BurgerBurgeAll_plugins](http://imagingbook.bitbucket.org/javadoc/BurgerBurgeAll_plugins) (collection of all plugins)
+
 * [BurgerBurgeEn1_plugins](http://imagingbook.bitbucket.org/javadoc/BurgerBurgeEn1_plugins) (English ‘Professional’ 1st ed, hardcover, 2008)
 * [BurgerBurgeEn2_plugins](http://imagingbook.bitbucket.org/javadoc/BurgerBurgeEn2_plugins) (English ‘Undergraduate’ ed, softcover, Vols. 1-3, 2011-2013)
 * [BurgerBurgeEn3_plugins](http://imagingbook.bitbucket.org/javadoc/BurgerBurgeEn3_plugins) (English ‘Professional’ 2nd ed, hardcover, 2016)
