@@ -17,7 +17,7 @@ Please visit www.imagingbook.com for more information.
 
 ## Downloads:
 
-* https://bitbucket.org/imagingbook/imagingbook-public/downloads (JAR files)
+* [JAR files including Java source and documentation](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
 
 
 ## NOTE:
