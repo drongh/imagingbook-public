@@ -7,8 +7,9 @@
  * All rights reserved. Visit http://www.imagingbook.com for additional details.
  *  
  *******************************************************************************/
+
 /**
- * This package contains general utility classes used in demo plugins and in 
- * library classes in the 'pub' package.
+ * Classes for elementary operations used by demo plugins and 
+ * library classes in the {@literal imagingbook.pub} package.
  */
 package imagingbook.lib;

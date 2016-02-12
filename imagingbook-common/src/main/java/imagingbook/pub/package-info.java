@@ -7,8 +7,9 @@
  * All rights reserved. Visit http://www.imagingbook.com for additional details.
  *  
  *******************************************************************************/
+
 /**
- * This package contains library classes implementing specific image processing
+ * Classes implementing specific image processing
  * tasks. The are designed to be independent of ImageJ as far as possible to be 
  * easily portable to other image processing environments.
  */
