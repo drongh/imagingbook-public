@@ -2,12 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.imagingbook</groupId>
-    <artifactId>imagingbook</artifactId>
-    <version>1.0</version>
+    <artifactId>imagingbook-public</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>imagingbook-common</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <!-- <version>1.0</version> -->
 
   <properties>
 	<myproject.root>${basedir}/../..</myproject.root>
