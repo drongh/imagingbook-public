@@ -5,7 +5,7 @@
 		<artifactId>imagingbook-public</artifactId>
 		<version>1.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>BurgerBurgeDe3_plugins</artifactId>
+	<artifactId>imagingbook_plugins_de3</artifactId>
 	<packaging>jar</packaging>
   	
 	<properties>

@@ -5,12 +5,12 @@
     <artifactId>imagingbook-public</artifactId>
     <version>1.1-SNAPSHOT</version>
   </parent>
-  <artifactId>BurgerBurgeAll_plugins</artifactId>
+  <artifactId>imagingbook_plugins_all</artifactId>
   <packaging>jar</packaging>
 
 	<properties>
 		<myproject.root>${basedir}/../..</myproject.root>
-		<!-- <javadoc-doctitle>ImageJ Plugins for Burger/Burge (EN3)</javadoc-doctitle> -->
+		<!-- <javadoc-doctitle>ImageJ Plugins for Burger/Burge books (all)</javadoc-doctitle> -->
   	</properties>
   	
   <dependencies>
