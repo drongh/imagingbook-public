@@ -27,7 +27,8 @@
   </licenses>
   
   <scm>
-    <developerConnection>scm:git:https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
+    <developerConnection>scm:git:https://bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
+    <tag>imagingbook-1.0</tag>
   </scm>
   
   
