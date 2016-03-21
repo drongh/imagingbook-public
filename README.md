@@ -4,7 +4,7 @@
 # ImagingBook Source Reporitory
 
 This repository contains **Java source code** accompanying the 
-**digital image processing books** by W. Burger & M. J. Burge, 
+**digital image processing books** by **W. Burger and M. J. Burge**, 
 published by Springer. This software is based on ImageJ.
 Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for more information.
 
