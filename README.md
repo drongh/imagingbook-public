@@ -30,7 +30,7 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 
 ## Wiki:
 
-* [Home](https://bitbucket.org/imagingbook/imagingbook-public/wiki/)
+* [Overview](https://bitbucket.org/imagingbook/imagingbook-public/wiki/browse/)
 
 ## NOTE:
 
