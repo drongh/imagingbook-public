@@ -3,7 +3,7 @@
 This repository contains **Java source code** accompanying the 
 **digital image processing books** by W. Burger & M. J. Burge, 
 published by Springer. This software is based on ImageJ.
-Please visit www.imagingbook.com for more information.
+Please visit **[www.imagingbook.com](www.imagingbook.com)** for more information.
 
 ##JavaDoc Pages:
 
