@@ -22,4 +22,4 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 
 ## NOTE:
 
-This is the official ImagingBook repository (originally hosted at http://sourceforge.net/projects/imagingbook/).
+This is the official ImagingBook repository (originally hosted at http://sourceforge.net/projects/imagingbook/ till March 2016).
