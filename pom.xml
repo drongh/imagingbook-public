@@ -3,7 +3,7 @@
   <groupId>com.imagingbook</groupId>
   <artifactId>imagingbook</artifactId>
   <!-- https://issues.apache.org/jira/browse/MNG-624 -->
-  <version>FIXED</version> <!-- <version>0.0.1-SNAPSHOT</version> -->
+  <version>1.0</version> <!-- <version>0.0.1-SNAPSHOT</version> -->
   <packaging>pom</packaging>
   <name>ImagingBook</name>
   
@@ -24,6 +24,12 @@
   		<url>http://opensource.org/licenses/BSD-2-Clause</url>
   	</license>
   </licenses>
+  
+  <scm>
+    <developerConnection>scm:git:https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
+    <tag>imagingbook-1.0</tag>
+  </scm>
+  
   
   <modules>
   	<module>imagingbook-common</module>
@@ -87,7 +93,14 @@
 	     </plugins>
 	  </pluginManagement>
 	  
-	  <plugins>		
+	  <plugins>	
+	  
+	  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
+	  	
 	    <plugin>
 	      <!-- Javadoc generation -->
 	        <groupId>org.apache.maven.plugins</groupId>
@@ -150,7 +163,7 @@
 			<artifactId>maven-project-info-reports-plugin</artifactId>
 			<version>2.8.1</version>
 			<reportSets>
-				 <reportSet></reportSet>
+				 <reportSet />
 			</reportSets>
 		</plugin>
      </plugins>
