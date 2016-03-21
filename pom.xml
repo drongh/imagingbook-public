@@ -1,13 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.imagingbook</groupId>
 	<artifactId>imagingbook-public</artifactId>
 	<!-- https://issues.apache.org/jira/browse/MNG-624 -->
 	<version>0.96-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<!-- <name>ImagingBook</name> -->
 
-	<description>Java source code for image processing books by W. Burger and M.J. Burge</description>
+	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
 	<inceptionYear>2006</inceptionYear>
 	<url>http://www.imagingbook.com</url>
 	<developers>
@@ -27,24 +27,21 @@
 
 	<scm>
 		<developerConnection>scm:git:https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
-	<distributionManagement>	<!-- required in deploy step of release plugin,  http://www.disasterarea.co.uk/blog/maven-release-plugin/-->
-		<repository>			<!--seems that all this is IGNORED? -->
+	<distributionManagement>	<!-- required in deploy step of release plugin, http://www.disasterarea.co.uk/blog/maven-release-plugin/ -->
+		<repository>
 			<id>localrepo</id>
 			<name>Local release checkout</name>
 			<url>file:///c:/tmp/repo-release</url>
-			<!-- <url>file:${basedir}/repo-release</url> -->
 		</repository>
 		<snapshotRepository>
 			<id>localsnapshotrepo</id>
 			<name>Local snapshot checkout</name>
 			<url>file:///c:/tmp/repo-snapshots</url>
-			<!-- <url>file:${basedir}/repo-snapshots</url> -->
 		</snapshotRepository>
 	</distributionManagement>
-
 
 	<modules>
 		<module>imagingbook-common</module>
