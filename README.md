@@ -1,4 +1,4 @@
-![cover_en_200x200.png](https://bitbucket.org/repo/8Gjapq/images/18697308-cover_en_200x200.png)
+![cover_en_100x100.png](https://bitbucket.org/repo/8Gjapq/images/1753759858-cover_en_100x100.png)
 
 
 # ImagingBook Source Reporitory
