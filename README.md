@@ -10,11 +10,9 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 * [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public)
 * [Browse the source code](https://bitbucket.org/imagingbook/imagingbook-public/src)
 
-##JavaDoc Pages:
+##JavaDoc Pages (library and demo plugins):
 
-###Common library:
 * [imagingbook-common](http://imagingbook.bitbucket.org/javadoc/imagingbook-common) (ImagingBook common library)
-
 * [imagingbook_plugins_all](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_all) (collection of all book plugins)
 * [imagingbook_plugins_en1](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en1) (English ‘Professional’ 1st ed, 2008)
 * [imagingbook_plugins_en2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en2) (English ‘Undergraduate’ ed, Vols. 1-3, 2011-2013)
