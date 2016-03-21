@@ -1,4 +1,4 @@
-# ImagingBook
+# ImagingBook Source Reporitory
 
 This repository contains **Java source code** accompanying the 
 **digital image processing books** by W. Burger & M. J. Burge, 
