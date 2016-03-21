@@ -10,7 +10,7 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 
 ##Source code:
 
-* [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public)
+* [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public) (this page)
 * [Browse the source code](https://bitbucket.org/imagingbook/imagingbook-public/src)
 
 ## Downloads:
