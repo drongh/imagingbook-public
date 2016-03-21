@@ -28,7 +28,9 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 * **[imagingbook_plugins_de2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de2)** (German 2nd ed., 2006)
 * **[imagingbook_plugins_de3](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de3)** (German 3rd ed., 2015)
 
+## Wiki:
 
+* [Home](https://bitbucket.org/imagingbook/imagingbook-public/wiki/)
 
 ## NOTE:
 
