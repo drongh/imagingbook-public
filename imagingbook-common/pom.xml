@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.imagingbook</groupId>
     <artifactId>imagingbook-public</artifactId>
-    <version>0.93</version>
+    <version>0.94-SNAPSHOT</version>
   </parent>
   <artifactId>imagingbook-common</artifactId>
   <packaging>jar</packaging>
