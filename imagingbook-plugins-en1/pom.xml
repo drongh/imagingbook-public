@@ -7,7 +7,6 @@
 	</parent>
 	<artifactId>BurgerBurgeEn1_plugins</artifactId>
 	<packaging>jar</packaging>
-  <!-- <version>1.0</version> -->
   	
 	<properties>
 		<myproject.root>${basedir}/../..</myproject.root>
@@ -19,7 +18,7 @@
   		<groupId>com.imagingbook</groupId>
   		<artifactId>imagingbook-common</artifactId>
   		<!-- <version>${imagingbook-common.version}</version>  -->
-  		<version>1.0</version>
+  		<version>0.94-SNAPSHOT</version>
   	</dependency>
   </dependencies>
   
