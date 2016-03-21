@@ -30,7 +30,7 @@
 		<developerConnection>scm:git:https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
 	</scm>
 
-	<distributionManagement>
+	<distributionManagement>	<!-- required in deploy step of release plugin,  http://www.disasterarea.co.uk/blog/maven-release-plugin/-->
 		<repository>
 			<id>localrepo</id>
 			<name>Local release/snapshot repo</name>
