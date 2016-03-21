@@ -33,13 +33,13 @@
 	<distributionManagement>	<!-- required in deploy step of release plugin,  http://www.disasterarea.co.uk/blog/maven-release-plugin/-->
 		<repository>			<!--seems that all this is IGNORED? -->
 			<id>localrepo</id>
-			<name>Local release/snapshot repo</name>
+			<name>Local release checkout</name>
 			<url>file:///c:/tmp/repo-release</url>
 			<!-- <url>file:${basedir}/repo-release</url> -->
 		</repository>
 		<snapshotRepository>
-			<id>fakesnapshotrepo</id>
-			<name>Local file system</name>
+			<id>localsnapshotrepo</id>
+			<name>Local snapshot checkout</name>
 			<url>file:///c:/tmp/repo-snapshots</url>
 			<!-- <url>file:${basedir}/repo-snapshots</url> -->
 		</snapshotRepository>
@@ -89,7 +89,7 @@
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
-			<version>1.50e</version>
+			<version>1.50h</version>
 		</dependency>
 	</dependencies>
 
