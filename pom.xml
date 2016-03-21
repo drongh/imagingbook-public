@@ -31,7 +31,7 @@
   </scm>
 
 	<distributionManagement>	<!-- required in deploy step of release plugin,  http://www.disasterarea.co.uk/blog/maven-release-plugin/-->
-		<repository>
+		<repository>			<!--seems that all this is IGNORED? -->
 			<id>localrepo</id>
 			<name>Local release/snapshot repo</name>
 			<url>file:${basedir}/repo-release</url>
