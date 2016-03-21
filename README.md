@@ -5,6 +5,11 @@ This repository contains **Java source code** accompanying the
 published by Springer. This software is based on ImageJ.
 Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for more information.
 
+##Browse the source code:
+
+* [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public)
+* [Browse the source code](https://bitbucket.org/imagingbook/imagingbook-public/src)
+
 ##JavaDoc Pages:
 
 * [imagingbook-common](http://imagingbook.bitbucket.org/javadoc/imagingbook-common) (ImagingBook common library)
