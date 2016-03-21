@@ -34,12 +34,14 @@
 		<repository>			<!--seems that all this is IGNORED? -->
 			<id>localrepo</id>
 			<name>Local release/snapshot repo</name>
-			<url>file:${basedir}/repo-release</url>
+			<url>file:///c:/tmp/repo-release</url>
+			<!-- <url>file:${basedir}/repo-release</url> -->
 		</repository>
 		<snapshotRepository>
 			<id>fakesnapshotrepo</id>
 			<name>Local file system</name>
-			<url>file:${basedir}/repo-snapshots</url>
+			<url>file:///c:/tmp/repo-snapshots</url>
+			<!-- <url>file:${basedir}/repo-snapshots</url> -->
 		</snapshotRepository>
 	</distributionManagement>
 
