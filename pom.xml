@@ -37,8 +37,8 @@
     
   <properties>
   	<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
-  	<imagingbook.version>1.0-SNAPSHOT</imagingbook.version>
-  	<imagingbook-common.version>1.0-SNAPSHOT</imagingbook-common.version>
+	<!-- <imagingbook.version>1.0-SNAPSHOT</imagingbook.version> -->
+	<!-- <imagingbook-common.version>1.0-SNAPSHOT</imagingbook-common.version> -->
   	
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
