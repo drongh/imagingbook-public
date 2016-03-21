@@ -3,7 +3,7 @@
 	<groupId>com.imagingbook</groupId>
 	<artifactId>imagingbook-public</artifactId>
 	<!-- https://issues.apache.org/jira/browse/MNG-624 -->
-	<version>0.95</version>
+	<version>0.96-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<!-- <name>ImagingBook</name> -->
 
@@ -27,7 +27,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
-	  <tag>imagingbook-public-0.95</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<distributionManagement>	<!-- required in deploy step of release plugin,  http://www.disasterarea.co.uk/blog/maven-release-plugin/-->
