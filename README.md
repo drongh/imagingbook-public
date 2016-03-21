@@ -10,6 +10,11 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 * [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public)
 * [Browse the source code](https://bitbucket.org/imagingbook/imagingbook-public/src)
 
+## Downloads:
+
+* [JAR files including Java source and documentation](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
+
+
 ##JavaDoc Pages (common library and plugins for different book editions):
 
 * **[imagingbook-common](http://imagingbook.bitbucket.org/javadoc/imagingbook-common)** (imagingbook-common library)
@@ -20,9 +25,6 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 * **[imagingbook_plugins_de2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de2)** (German 2nd ed., 2006)
 * **[imagingbook_plugins_de3](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de3)** (German 3rd ed., 2015)
 
-## Downloads:
-
-* [JAR files including Java source and documentation](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
 
 
 ## NOTE:
