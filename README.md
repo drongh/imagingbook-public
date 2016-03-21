@@ -15,7 +15,7 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 
 ## Downloads:
 
-* [JAR files including Java source and documentation](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
+* [JAR files (common library and ImageJ plugins)](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
 
 
 ##JavaDoc Pages (common library and plugins for different book editions):
