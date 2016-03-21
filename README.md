@@ -13,12 +13,12 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 ##JavaDoc Pages (library and demo plugins):
 
 * **[imagingbook-common](http://imagingbook.bitbucket.org/javadoc/imagingbook-common)** (imagingbook-common library)
-* [imagingbook_plugins_all](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_all) (collection of all book plugins)
-* [imagingbook_plugins_en1](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en1) (English ‘Professional’ 1st ed, 2008)
-* [imagingbook_plugins_en2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en2) (English ‘Undergraduate’ ed, Vols. 1-3, 2011-2013)
-* [imagingbook_plugins_en3](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en3) (English ‘Professional’ 2nd ed, hardcover, 2016)
-* [imagingbook_plugins_de2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de2) (German 2nd ed., 2006)
-* [imagingbook_plugins_de3](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de3) (German 3rd ed., 2015)
+* **[imagingbook_plugins_all](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_all)** (collection of all book plugins)
+* **[imagingbook_plugins_en1](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en1)** (English ‘Professional’ 1st ed, 2008)
+* **[imagingbook_plugins_en2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en2)** (English ‘Undergraduate’ ed, Vols. 1-3, 2011-2013)
+* **[imagingbook_plugins_en3](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_en3)** (English ‘Professional’ 2nd ed, hardcover, 2016)
+* **[imagingbook_plugins_de2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de2)** (German 2nd ed., 2006)
+* **[imagingbook_plugins_de3](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de3)** (German 3rd ed., 2015)
 
 ## Downloads:
 
