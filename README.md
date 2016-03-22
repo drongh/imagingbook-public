@@ -1,7 +1,7 @@
 [![cover_en_100x100.png](https://bitbucket.org/repo/8Gjapq/images/1753759858-cover_en_100x100.png)](http://www.imagingbook.com)
 
 
-# ImagingBook Source Reporitory
+# ImagingBook Source Repository
 
 This repository contains **Java source code** accompanying the 
 **digital image processing books** by **W. Burger and M. J. Burge**, 
