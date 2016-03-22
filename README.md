@@ -8,7 +8,7 @@ This repository contains **Java source code** accompanying the
 published by Springer. This software is based on **[ImageJ](http://rsbweb.nih.gov/ij/index.html)**.
 Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for more information.
 
-Index terms: digital image processing, computer algorithms, Java, ImageJ, textbook support.
+**Index terms:** digital image processing, computer algorithms, Java, ImageJ, textbook support.
 
 ##Source code:
 
