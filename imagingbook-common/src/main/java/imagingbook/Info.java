@@ -39,7 +39,7 @@ public abstract class Info {
 			version = attr.getValue("Implementation-Version");
 			buildDate = attr.getValue("Build-Date");
 		} catch (IllegalArgumentException e) { }
-		return "version " + version + " build " + buildDate;
+		return version + " (" + buildDate + ")";
 	}
 	
 	

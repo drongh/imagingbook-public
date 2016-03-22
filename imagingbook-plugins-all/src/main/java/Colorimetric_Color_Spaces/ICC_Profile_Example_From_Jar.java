@@ -11,15 +11,11 @@ package Colorimetric_Color_Spaces;
 
 import java.awt.color.ICC_ColorSpace;
 import java.awt.color.ICC_Profile;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 import ij.IJ;
