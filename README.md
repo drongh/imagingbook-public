@@ -8,6 +8,8 @@ This repository contains **Java source code** accompanying the
 published by Springer. This software is based on **[ImageJ](http://rsbweb.nih.gov/ij/index.html)**.
 Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for more information.
 
+Index terms: digital image processing, computer algorithms, Java, ImageJ, textbook support.
+
 ##Source code:
 
 * [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public) (this page)
@@ -31,6 +33,8 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 ## Wiki:
 
 * [Overview](https://bitbucket.org/imagingbook/imagingbook-public/wiki/browse/)
+
+
 
 ## NOTE:
 
