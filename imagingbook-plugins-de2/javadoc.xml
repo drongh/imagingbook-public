@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="javadoc">
-    <target name="javadoc">
-        <javadoc access="public" author="true" classpath="C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\target\classes;C:\Maven\repository\org\apache\commons\commons-math3\3.5\commons-math3-3.5.jar;target/test-classes;C:\Maven\repository\net\imagej\ij\1.50e\ij-1.50e.jar;C:\PROJECTS\imagingbook\imagingbook-public\imagingbook-common\target\test-classes;C:\Program Files\Java\jdk1.8.0_65\lib\tools.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="Kap13_Spektraltechniken,Kap15_DCT,Kap10_Morphologische_Filter,Test,xC_ImageJ_Kurzreferenz,Kap05_Punktoperationen,Kap06_Filter,Kap09_Hough_Transformation,Kap11_Binaere_Regionen,Kap04_Histogramme,Kap03_ImageJ,Kap07_Kanten_Konturen,Kap14_DFT_2D,Kap16_Geometrische_Operationen,Kap12_Farbbilder,Kap08_Eckpunkte,Kap17_Bildvergleich" source="1.8" sourcepath="src/main/java" splitindex="true" use="true" version="true"/>
-    </target>
-</project>
