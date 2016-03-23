@@ -31,7 +31,7 @@ public abstract class Info {
 		if (mf == null) {
 			return "UNKNOWN";
 		}
-		IJ.log("listing attributes");
+		//IJ.log("listing attributes");
 		Attributes attr = mf.getMainAttributes();
 		String version = null;
 		String buildDate = null;

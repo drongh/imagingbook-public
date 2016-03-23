@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>imagingbook-public</artifactId>
 	<!-- https://issues.apache.org/jira/browse/MNG-624 -->
@@ -56,20 +57,16 @@
 	</modules>
 
 	<properties>
-		<!-- https://stackoverflow.com/questions/8026783/can-you-inherit-the-version-from-the-parent-pom-in-maven/13946375#13946375 -->
-		<!-- <imagingbook.version>1.0-SNAPSHOT</imagingbook.version> -->
-		<!-- <imagingbook-common.version>1.0-SNAPSHOT</imagingbook-common.version> -->
-
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<myproject.root>${basedir}/..</myproject.root>   <!-- property is redefined in submodule POMs! http://stackoverflow.com/a/8848129 -->
 
-		<!-- settings for JavaDoc generation: -->
-		<myproject.root>${basedir}/..</myproject.root>   <!-- property is overwritten in submodule POMs! http://stackoverflow.com/a/8848129 -->
-		<imagingbook.webroot>imagingbook-website</imagingbook.webroot>
-		<!-- <imagingbook.basedir>${project.parent.basedir}</imagingbook.basedir> -->
-		<!-- <imagingbook.webdir>web-submodule</imagingbook.webdir> -->
+		<!-- location for deploying JavaDoc output: -->
+		<!-- <imagingbook.webroot>imagingbook-website</imagingbook.webroot> --> <!-- OLD: PROJECTS/imagingbook-all/imagingbook-website/ -->
+		<imagingbook.webroot>../imagingbook-website</imagingbook.webroot> <!-- NEW: PROJECTS/imagingbook-website/ -->
 
-		<javadoc-doctitle>${project.name} (${project.version})</javadoc-doctitle> <!-- overwrite in submodules if needed -->
+		<!-- overwrite in submodules if needed -->
+		<javadoc-doctitle>${project.name} (${project.version})</javadoc-doctitle>
 
 		<!-- https://itaffinity.wordpress.com/2014/02/25/maven-create-a-simple-build-number/ -->
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
@@ -108,6 +105,16 @@
 		</pluginManagement>
 
 		<plugins>
+
+			<!-- skip tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

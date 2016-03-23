@@ -43,17 +43,12 @@ public abstract class FileUtils {
 
 	/**
 	 * Find the path from which a given class was loaded.
-	 * @param c a class.
+	 * @param clazz a class.
 	 * @return the path of the .class file for the given class or null (e.g.
 	 * if the class is anonymous).
 	 */   
-	public static String getClassPath(Class<?> c) {
-		URL location = c.getResource("");
-		String cpath = null;
-		try {
-			cpath = new File(location.getPath()).getCanonicalPath();
-		} catch (IOException e) {}
-		return cpath;
+	public static String getClassPath(Class<?> clazz) {
+		return getResourcePath(clazz, "");
 	}
 
 	/**
@@ -64,12 +59,12 @@ public abstract class FileUtils {
 	 * is obtained by 
 	 * String path = getResourcePath(C.class, "resources/lenna.jpg");
 	 * 
-	 * @param c anchor class 
+	 * @param clazz anchor class 
 	 * @param name name of the resource to be found
 	 * @return the path for the resource or null if not found.
 	 */
-	public static String getResourcePath(Class<?> c, String name) {
-		URL url = c.getResource(name);
+	public static String getResourcePath(Class<?> clazz, String name) {
+		URL url = clazz.getResource(name);
 		if (url == null) {
 			return null;
 		}
@@ -79,7 +74,7 @@ public abstract class FileUtils {
 	}
 
 	/**
-	 * Finds a resource relative to the location of class c and returns
+	 * Finds a resource relative to the location of class clazz and returns
 	 * a stream to read from.
 	 * Example: Assume class C was loaded from file someLocation/C.class
 	 * and there is a subfolder someLocation/resources/ that contains 
@@ -100,6 +95,9 @@ public abstract class FileUtils {
 	
 	// ----------------------------------------------------------------
 
+	/**
+	 * Lists (to System.out) the paths where classes are loaded from.
+	 */
 	public static void printClassPath() {
 		ClassLoader cl = ClassLoader.getSystemClassLoader();
 		URL[] urls = ((URLClassLoader) cl).getURLs();
@@ -247,7 +245,7 @@ public abstract class FileUtils {
 	public static Manifest getJarManifest(Class<?> clazz) {
 		String className = clazz.getSimpleName() + ".class";		
 		String classPath = clazz.getResource(className).toString();
-		IJ.log("classPath = " + classPath);
+		//IJ.log("classPath = " + classPath);
 		if (!classPath.startsWith("jar")) { // Class not from JAR
 		  return null;
 		}
