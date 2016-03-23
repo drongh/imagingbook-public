@@ -247,7 +247,7 @@ public abstract class FileUtils {
 	public static Manifest getJarManifest(Class<?> clazz) {
 		String className = clazz.getSimpleName() + ".class";		
 		String classPath = clazz.getResource(className).toString();
-		IJ.log("classPath = " + classPath);
+		//IJ.log("classPath = " + classPath);
 		if (!classPath.startsWith("jar")) { // Class not from JAR
 		  return null;
 		}
