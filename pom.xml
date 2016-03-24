@@ -1,11 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.imagingbook</groupId>
 	<artifactId>imagingbook-public</artifactId>
 	<!-- https://issues.apache.org/jira/browse/MNG-624 -->
-	<version>1.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<!-- <parent>
+    <groupId>com.imagingbook</groupId>
+    	<artifactId>imagingbook-all</artifactId>
+    	<version>1.2-SNAPSHOT</version>
+  	</parent> -->
 
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
 	<inceptionYear>2006</inceptionYear>
@@ -71,20 +74,20 @@
 
 	</properties>
 
-	<repositories>
+<!-- 	<repositories>
 		<repository>
 			<id>imagej.public</id>
 			<url>http://maven.imagej.net/content/groups/public</url>
 		</repository>
-	</repositories>
+	</repositories> -->
 
-	<dependencies>
+<!-- 	<dependencies>
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
 			<version>1.50h</version>
 		</dependency>
-	</dependencies>
+	</dependencies> -->
 
 	<build>
 		<pluginManagement>
@@ -191,4 +194,10 @@
 		</plugins>
 	</reporting>
 
+	<parent>
+		<groupId>com.imagingbook</groupId>
+		<artifactId>imagingbook-all</artifactId>
+		<version>1.2-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
 </project>
