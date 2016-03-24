@@ -13,6 +13,7 @@
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
 	<inceptionYear>2006</inceptionYear>
 	<url>http://www.imagingbook.com</url>
+	
 	<developers>
 		<developer>
 			<name>Wilhelm Burger</name>
@@ -21,6 +22,7 @@
 			<name>Mark J. Burge</name>
 		</developer>
 	</developers>
+	
 	<licenses>
 		<license>
 			<name>BSD 2-Clause "Simplified" License</name>
@@ -32,6 +34,13 @@
 		<developerConnection>scm:git:https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
 
 	<distributionManagement>	<!-- required in deploy step of release plugin, http://www.disasterarea.co.uk/blog/maven-release-plugin/ -->
 		<repository>
@@ -57,8 +66,8 @@
 	</modules>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
 		<myproject.root>${basedir}/..</myproject.root>   <!-- property is redefined in submodule POMs! http://stackoverflow.com/a/8848129 -->
 
 		<!-- location for deploying JavaDoc output: -->

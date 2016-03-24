@@ -13,7 +13,6 @@ package imagingbook;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
 
-import ij.IJ;
 import imagingbook.lib.util.FileUtils;
 
 public abstract class Info {

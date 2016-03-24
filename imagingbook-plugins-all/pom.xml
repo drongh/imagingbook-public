@@ -1,34 +1,27 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.imagingbook</groupId>
-    <artifactId>imagingbook-public</artifactId>
-    <version>1.2-SNAPSHOT</version>
-  </parent>
-  <artifactId>imagingbook_plugins_all</artifactId>
-  <packaging>jar</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.imagingbook</groupId>
+		<artifactId>imagingbook-public</artifactId>
+		<version>1.2-SNAPSHOT</version>
+	</parent>
+	<artifactId>imagingbook_plugins_all</artifactId>
+	<packaging>jar</packaging>
 
 	<properties>
 		<myproject.root>${basedir}/../..</myproject.root>
 		<!-- <javadoc-doctitle>ImageJ Plugins for Burger/Burge books (all)</javadoc-doctitle> -->
-  	</properties>
-  	
-  <dependencies>
-  	<dependency>
-  		<groupId>com.imagingbook</groupId>
-  		<artifactId>imagingbook-common</artifactId>
-  		<!-- <version>${imagingbook-common.version}</version>  -->
-  		<version>1.2-SNAPSHOT</version>
-  	</dependency>
-  	<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-math3</artifactId>
-			<version>3.6</version>
-	</dependency>
-  </dependencies>
-  
-  
-  	<build>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.imagingbook</groupId>
+			<artifactId>imagingbook-common</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
 		<outputDirectory>${project.basedir}/ImageJ/plugins</outputDirectory>
 		<plugins>
 			<!-- we rename the target jar and place it in another subdir -->
