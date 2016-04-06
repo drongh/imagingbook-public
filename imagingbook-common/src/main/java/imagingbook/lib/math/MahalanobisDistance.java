@@ -16,6 +16,8 @@ import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.stat.correlation.Covariance;
 
+import ij.IJ;
+
 /**
  * This class implements the Mahalanobis distance using the Apache commons math library.
  * Look at the numerical example in Theodoridis/Koutumbras, "Pattern recognition", p. 27.
@@ -148,6 +150,7 @@ public class MahalanobisDistance extends VectorNorm {
 	 * @return The matrix for pre-transforming the original sample vectors.
 	 */
 	public double[][] getWhiteningTransformation() {
+		IJ.log("in whitening");
 		double relativeSymmetryThreshold = 1.0E-6; 		// CholeskyDecomposition.DEFAULT_RELATIVE_SYMMETRY_THRESHOLD == 1.0E-15; too small!
         double absolutePositivityThreshold = 1.0E-10;	// CholeskyDecomposition.DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD == 1.0E-10;
 		CholeskyDecomposition cd = 
