@@ -24,6 +24,7 @@ import org.apache.commons.math3.stat.correlation.Covariance;
 public class MahalanobisDistance extends VectorNorm {
 	
 	public static final double DEFAULT_DIAGONAL_INCREMENT = 10E-6;
+	public static final boolean BIAS_CORRECTION = false;	// we use no bias correction here (factor is 1/n)
 	
 	private final int n;					// number of samples
 	private final int m;					// feature dimension
@@ -52,7 +53,7 @@ public class MahalanobisDistance extends VectorNorm {
 
 		mean = makeMeanVector(samples);
 		
-		Covariance cov = new Covariance(samples, false);	// we use no bias correction here (factor 1/n)
+		Covariance cov = new Covariance(samples, BIAS_CORRECTION);	
 		RealMatrix S = cov.getCovarianceMatrix();
 		
 		// condition the covariance matrix to avoid singularity:
@@ -61,7 +62,7 @@ public class MahalanobisDistance extends VectorNorm {
 		
 		Cov = S.getData();
 		// get the inverse covariance matrix
-		iCov = MatrixUtils.inverse(S).getData();
+		iCov = MatrixUtils.inverse(S).getData();	// not always symmetric?
 	}
 	
 	/**
@@ -85,12 +86,12 @@ public class MahalanobisDistance extends VectorNorm {
 	}
 	
 	RealMatrix conditionCovarianceMatrix2(RealMatrix S) {
-		EigenDecomposition ed = new EigenDecomposition(S);
-		RealMatrix V = ed.getV();
-		RealMatrix D = ed.getD();
+		EigenDecomposition ed = new EigenDecomposition(S);  // S  ->  V . D . V^T
+		RealMatrix V  = ed.getV();
+		RealMatrix D  = ed.getD();	// diagonal matrix of eigenvalues
 		RealMatrix VT = ed.getVT();
 		for (int i = 0; i < D.getRowDimension(); i++) {
-			D.setEntry(i, i, Math.max(D.getEntry(i, i), 10E-6));	// setting eigenvals to zero is not enough!
+			D.setEntry(i, i, Math.max(D.getEntry(i, i), 10E-6));	// setting eigenvalues to zero is not enough!
 		}
 		return V.multiply(D).multiply(VT);
 	}
@@ -139,16 +140,19 @@ public class MahalanobisDistance extends VectorNorm {
 	/**
 	 * Returns the 'root' U of the inverse covariance matrix S^{-1},
 	 * such that S^{-1} = U^T . U
-	 * This matrix can be used to pre-transform the original sample
+	 * This matrix can be used to pre-transform (by X -> U . X) the original sample
 	 * vectors to a space where distance measurement (in the Mahalanobis
 	 * sense) can be calculated with the usual Euclidean norm.
 	 * The matrix U is invertible in case the reverse mapping is required.
 	 * 
 	 * @return The matrix for pre-transforming the original sample vectors.
 	 */
-	public double[][] getTransformationMatrix() {
+	public double[][] getWhiteningTransformation() {
+		double relativeSymmetryThreshold = 1.0E-6; 		// CholeskyDecomposition.DEFAULT_RELATIVE_SYMMETRY_THRESHOLD == 1.0E-15; too small!
+        double absolutePositivityThreshold = 1.0E-10;	// CholeskyDecomposition.DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD == 1.0E-10;
 		CholeskyDecomposition cd = 
-				new CholeskyDecomposition(MatrixUtils.createRealMatrix(iCov));
+				new CholeskyDecomposition(MatrixUtils.createRealMatrix(iCov),
+						relativeSymmetryThreshold, absolutePositivityThreshold);
 		RealMatrix U = cd.getLT();
 		return U.getData();
 	}
@@ -244,90 +248,90 @@ public class MahalanobisDistance extends VectorNorm {
 	 * 
 	 * @param args 
 	 */
-//	public static void main(String[] args) {
-//		
-//		double[] X0 = {0, 0, 0};
-//		double[] X1 = {75, 37, 12};
-//		double[] X2 = {41, 27, 20};
-//		double[] X3 = {93, 81, 11};
-//		double[] X4 = {12, 48, 52};
-//		double[] X5 = {12, 48, 100};
-//		
-//		
-//		System.out.println("X0 = " + Matrix.toString(X0));
-//		System.out.println("X1 = " + Matrix.toString(X1));
-//		System.out.println("X2 = " + Matrix.toString(X2));
-//		System.out.println("X3 = " + Matrix.toString(X3));
-//		System.out.println("X4 = " + Matrix.toString(X4));
-//		System.out.println("X5 = " + Matrix.toString(X5));
-//		System.out.println();
-//		
-//		double[][] samples = {X1, X2, X3, X4};
-//		
-//		MahalanobisDistance mhd = new MahalanobisDistance(samples);
-//		
-//		double[] mu = mhd.getMeanVector();
-//		System.out.println("mu = " + Matrix.toString(mu));
-//		
-//		System.out.println();
-//		
-//		// covariance matrix Cov (3x3)
-//		double[][] cov = mhd.getCovarianceMatrix();
-//		System.out.println("cov = " + Matrix.toString(cov));
-//		
-//		System.out.println();
-//		
-//		double[][] icov =  mhd.getInverseCovarianceMatrix();
-//		System.out.println("icov = " + Matrix.toString(icov)); System.out.println();
-//
-//		System.out.format("MH-dist(X1,X1) = %.3f\n", mhd.distance(X1, X1));
-//		System.out.format("MH-dist(X1,X2) = %.3f\n", mhd.distance(X1, X2));
-//		System.out.format("MH-dist(X2,X1) = %.3f\n", mhd.distance(X2, X1));
-//		System.out.format("MH-dist(X1,X3) = %.3f\n", mhd.distance(X1, X3));
-//		System.out.format("MH-dist(X1,X4) = %.3f\n", mhd.distance(X1, X4));
-//		System.out.format("MH-dist(X1,X5) = %.3f\n", mhd.distance(X1, X5));
-//		System.out.println();
-//		
-//		System.out.format("MH-dist(X1,mu) = %.3f\n", mhd.distance(X1, mu));
-//		System.out.format("MH-dist(X2,mu) = %.3f\n", mhd.distance(X2, mu));
-//		System.out.format("MH-dist(X3,mu) = %.3f\n", mhd.distance(X3, mu));
-//		System.out.format("MH-dist(X4,mu) = %.3f\n", mhd.distance(X4, mu));
-//		System.out.println();
-//		
-//		System.out.format("MH-dist(X5,mu) = %.3f\n", mhd.distance(X5, mu));
-//		System.out.format("MH-dist(X0,mu) = %.3f\n", mhd.distance(X0, mu));
-//		System.out.println();
-//		
-//		VectorNorm L2 = new VectorNorm.L2();
-//		System.out.format("L2-distance(X1,X2) = %.3f\n", L2.distance(X1, X2));
-//		System.out.format("L2-distance(X2,X1) = %.3f\n", L2.distance(X2, X1));
-//		
-//		// ------------------------------------------------------
-//		
-//		System.out.println();
-//		System.out.println("Testing pre-transformed Mahalanobis distances:");
-//		RealMatrix U = MatrixUtils.createRealMatrix(mhd.getTransformationMatrix());
-//		System.out.println("U = " + Matrix.toString(U.getData()));
-//		double[] Y0 = U.operate(X0);
-//		double[] Y1 = U.operate(X1);
-//		double[] Y2 = U.operate(X2);
-//		double[] Y3 = U.operate(X3);
-//		double[] Y4 = U.operate(X4);
-//		double[] Y5 = U.operate(X5);
-//		
-//		System.out.println("Y0 = " + Matrix.toString(Y0));
-//		System.out.println("Y1 = " + Matrix.toString(Y1));
-//		System.out.println("Y2 = " + Matrix.toString(Y2));
-//		System.out.println("Y3 = " + Matrix.toString(Y3));
-//		System.out.println("Y4 = " + Matrix.toString(Y4));
-//		System.out.println("Y5 = " + Matrix.toString(Y5));
-//		
-//		System.out.format("pre-transformed MH-distance(X1,X2) = %.3f\n", L2.distance(Y1, Y2));
-//		System.out.format("pre-transformed MH-distance(X1,X3) = %.3f\n", L2.distance(Y1, Y3));
-//		System.out.format("pre-transformed MH-distance(X1,X4) = %.3f\n", L2.distance(Y1, Y4));
-//		System.out.format("pre-transformed MH-distance(X1,X5) = %.3f\n", L2.distance(Y1, Y5));
-//		
-//	}
+	public static void main(String[] args) {
+		
+		double[] X0 = {0, 0, 0};
+		double[] X1 = {75, 37, 12};
+		double[] X2 = {41, 27, 20};
+		double[] X3 = {93, 81, 11};
+		double[] X4 = {12, 48, 52};
+		double[] X5 = {12, 48, 100};
+		
+		
+		System.out.println("X0 = " + Matrix.toString(X0));
+		System.out.println("X1 = " + Matrix.toString(X1));
+		System.out.println("X2 = " + Matrix.toString(X2));
+		System.out.println("X3 = " + Matrix.toString(X3));
+		System.out.println("X4 = " + Matrix.toString(X4));
+		System.out.println("X5 = " + Matrix.toString(X5));
+		System.out.println();
+		
+		double[][] samples = {X1, X2, X3, X4};
+		
+		MahalanobisDistance mhd = new MahalanobisDistance(samples);
+		
+		double[] mu = mhd.getMeanVector();
+		System.out.println("mu = " + Matrix.toString(mu));
+		
+		System.out.println();
+		
+		// covariance matrix Cov (3x3)
+		double[][] cov = mhd.getCovarianceMatrix();
+		System.out.println("cov = " + Matrix.toString(cov));
+		
+		System.out.println();
+		
+		double[][] icov =  mhd.getInverseCovarianceMatrix();
+		System.out.println("icov = " + Matrix.toString(icov)); System.out.println();
+
+		System.out.format("MH-dist(X1,X1) = %.3f\n", mhd.distance(X1, X1));
+		System.out.format("MH-dist(X1,X2) = %.3f\n", mhd.distance(X1, X2));
+		System.out.format("MH-dist(X2,X1) = %.3f\n", mhd.distance(X2, X1));
+		System.out.format("MH-dist(X1,X3) = %.3f\n", mhd.distance(X1, X3));
+		System.out.format("MH-dist(X1,X4) = %.3f\n", mhd.distance(X1, X4));
+		System.out.format("MH-dist(X1,X5) = %.3f\n", mhd.distance(X1, X5));
+		System.out.println();
+		
+		System.out.format("MH-dist(X1,mu) = %.3f\n", mhd.distance(X1, mu));
+		System.out.format("MH-dist(X2,mu) = %.3f\n", mhd.distance(X2, mu));
+		System.out.format("MH-dist(X3,mu) = %.3f\n", mhd.distance(X3, mu));
+		System.out.format("MH-dist(X4,mu) = %.3f\n", mhd.distance(X4, mu));
+		System.out.println();
+		
+		System.out.format("MH-dist(X5,mu) = %.3f\n", mhd.distance(X5, mu));
+		System.out.format("MH-dist(X0,mu) = %.3f\n", mhd.distance(X0, mu));
+		System.out.println();
+		
+		VectorNorm L2 = new VectorNorm.L2();
+		System.out.format("L2-distance(X1,X2) = %.3f\n", L2.distance(X1, X2));
+		System.out.format("L2-distance(X2,X1) = %.3f\n", L2.distance(X2, X1));
+		
+		// ------------------------------------------------------
+		
+		System.out.println();
+		System.out.println("Testing pre-transformed Mahalanobis distances:");
+		RealMatrix U = MatrixUtils.createRealMatrix(mhd.getWhiteningTransformation());
+		System.out.println("U = " + Matrix.toString(U.getData()));
+		double[] Y0 = U.operate(X0);
+		double[] Y1 = U.operate(X1);
+		double[] Y2 = U.operate(X2);
+		double[] Y3 = U.operate(X3);
+		double[] Y4 = U.operate(X4);
+		double[] Y5 = U.operate(X5);
+		
+		System.out.println("Y0 = " + Matrix.toString(Y0));
+		System.out.println("Y1 = " + Matrix.toString(Y1));
+		System.out.println("Y2 = " + Matrix.toString(Y2));
+		System.out.println("Y3 = " + Matrix.toString(Y3));
+		System.out.println("Y4 = " + Matrix.toString(Y4));
+		System.out.println("Y5 = " + Matrix.toString(Y5));
+		
+		System.out.format("pre-transformed MH-distance(X1,X2) = %.3f\n", L2.distance(Y1, Y2));
+		System.out.format("pre-transformed MH-distance(X1,X3) = %.3f\n", L2.distance(Y1, Y3));
+		System.out.format("pre-transformed MH-distance(X1,X4) = %.3f\n", L2.distance(Y1, Y4));
+		System.out.format("pre-transformed MH-distance(X1,X5) = %.3f\n", L2.distance(Y1, Y5));
+		
+	}
 
 /* Results: verified with Mathematica (bias-corrected):
 X0 = {0.000, 0.000, 0.000}
