@@ -140,10 +140,10 @@ public class MahalanobisDistance extends VectorNorm {
 	//------------------------------------------------------------------------------------
 	
 	/**
-	 * Returns the 'root' U of the inverse covariance matrix S^{-1},
+	 * Returns the 'root' (U) of the inverse covariance matrix S^{-1},
 	 * such that S^{-1} = U^T . U
-	 * This matrix can be used to pre-transform (by X -> U . X) the original sample
-	 * vectors to a space where distance measurement (in the Mahalanobis
+	 * This matrix can be used to pre-transform the original sample
+	 * vectors X (by X &#8594; U . X) to a space where distance measurement (in the Mahalanobis
 	 * sense) can be calculated with the usual Euclidean norm.
 	 * The matrix U is invertible in case the reverse mapping is required.
 	 * 
@@ -249,7 +249,7 @@ public class MahalanobisDistance extends VectorNorm {
 	 * example from UTICS-C Appendix:
 	 * N = 4 samples, K = 3 dimensions
 	 * 
-	 * @param args 
+	 * @param args ignored
 	 */
 	public static void main(String[] args) {
 		
