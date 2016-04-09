@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.imagingbook</groupId>
 		<artifactId>imagingbook-all</artifactId>
-		<version>1.2-SNAPSHOT</version>
+		<version>FIXED</version>
 	</parent>
 
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
@@ -202,4 +202,5 @@
 		</plugins>
 	</reporting>
 
+	<version>1.2-SNAPSHOT</version>
 </project>
