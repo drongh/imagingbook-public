@@ -20,8 +20,7 @@ import ij.IJ;
 
 /**
  * This class implements the Mahalanobis distance using the Apache commons math library.
- * Look at the numerical example in Theodoridis/Koutumbras, "Pattern recognition", p. 27.
- * UNFINISHED! TODO: Complete distance/magnitude methods. / Finalize conditioning of covariance matrix!
+ * See the numerical example in Theodoridis/Koutumbras, "Pattern recognition", p. 27.
  */
 public class MahalanobisDistance extends VectorNorm {
 	
@@ -59,8 +58,7 @@ public class MahalanobisDistance extends VectorNorm {
 		RealMatrix S = cov.getCovarianceMatrix();
 		
 		// condition the covariance matrix to avoid singularity:
-//		S = conditionCovarianceMatrix1(S);	// add small quantity to diagonal
-		S = conditionCovarianceMatrix2(S);	// enforce positive Eigenvalues
+		S = conditionCovarianceMatrix(S);
 		
 		Cov = S.getData();
 		// get the inverse covariance matrix
@@ -78,16 +76,14 @@ public class MahalanobisDistance extends VectorNorm {
 		this(samples, DEFAULT_DIAGONAL_INCREMENT);
 	}
 	
-	RealMatrix conditionCovarianceMatrix1(RealMatrix S) {
-		// (add a small quantity to the diagonal)
-		RealMatrix SS = S.copy();
-		for (int i = 0; i < SS.getRowDimension(); i++) {
-			SS.addToEntry(i, i, DEFAULT_DIAGONAL_INCREMENT);
-		}
-		return SS;
-	}
-	
-	RealMatrix conditionCovarianceMatrix2(RealMatrix S) {
+	// 
+	/**
+	 * Conditions the supplied covariance matrix by enforcing
+	 * positive eigenvalues along its main diagonal. 
+	 * @param S original covariance matrix
+	 * @return modified covariance matrix
+	 */
+	private RealMatrix conditionCovarianceMatrix(RealMatrix S) {
 		EigenDecomposition ed = new EigenDecomposition(S);  // S  ->  V . D . V^T
 		RealMatrix V  = ed.getV();
 		RealMatrix D  = ed.getD();	// diagonal matrix of eigenvalues
@@ -246,7 +242,7 @@ public class MahalanobisDistance extends VectorNorm {
 	// ----------------------------------------------------------------
 	
 	/** 
-	 * example from UTICS-C Appendix:
+	 * Test example from Burger/Burge UTICS-C Appendix:
 	 * N = 4 samples, K = 3 dimensions
 	 * 
 	 * @param args ignored
