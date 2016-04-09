@@ -45,14 +45,14 @@
 		<repository>
 			<id>localrepo</id>
 			<name>Local release checkout</name>
-			<!-- <url>file:///c:/tmp/repo-release</url> -->
-			<url>file:${basedir}/../checkout-release</url>
+			<url>file:///c:/tmp/repo-release</url>
+			<!-- <url>file:${basedir}/../checkout/release</url> -->
 		</repository>
 		<snapshotRepository>
 			<id>localsnapshotrepo</id>
 			<name>Local snapshot checkout</name>
-			<!-- <url>file:///c:/tmp/repo-snapshots</url> -->
-			<url>file:${basedir}/../checkout-snapshots</url>
+			<url>file:///c:/tmp/repo-snapshots</url>
+			<!-- <url>file:${basedir}/../checkout/snapshots</url> -->
 		</snapshotRepository>
 	</distributionManagement>
 
