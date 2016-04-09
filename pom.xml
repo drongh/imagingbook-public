@@ -45,12 +45,14 @@
 		<repository>
 			<id>localrepo</id>
 			<name>Local release checkout</name>
-			<url>file:///c:/tmp/repo-release</url>
+			<!-- <url>file:///c:/tmp/repo-release</url> -->
+			<url>file:${basedir}/../checkout-release</url>
 		</repository>
 		<snapshotRepository>
 			<id>localsnapshotrepo</id>
 			<name>Local snapshot checkout</name>
-			<url>file:///c:/tmp/repo-snapshots</url>
+			<!-- <url>file:///c:/tmp/repo-snapshots</url> -->
+			<url>file:${basedir}/../checkout-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -73,13 +75,13 @@
 		<!-- <imagingbook.webroot>imagingbook-website</imagingbook.webroot> --> <!-- OLD: PROJECTS/imagingbook-all/imagingbook-website/ -->
 		<imagingbook.webroot>../imagingbook-website</imagingbook.webroot> <!-- NEW: PROJECTS/imagingbook-website/ -->
 
+
 		<!-- overwrite in submodules if needed -->
 		<javadoc-doctitle>${project.name} (${project.version})</javadoc-doctitle>
 
 		<!-- https://itaffinity.wordpress.com/2014/02/25/maven-create-a-simple-build-number/ -->
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 		<buildDate>${maven.build.timestamp}</buildDate>
-
 	</properties>
 
 <!-- 	<repositories>
