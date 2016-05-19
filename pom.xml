@@ -1,18 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>imagingbook-public</artifactId>
-	<!-- https://issues.apache.org/jira/browse/MNG-624 -->
-	<packaging>pom</packaging>
-	<parent>
-		<groupId>com.imagingbook</groupId>
-		<artifactId>imagingbook-all</artifactId>
-		<version>FIXED</version>
-	</parent>
-
+	<artifactId>_public</artifactId>
+	<version>0.0.3-SNAPSHOT</version>
+	<packaging>pom</packaging>	
+	
+	<modules>
+		<module>../imagingbook-common</module>
+		<module>../imagingbook-plugins-all</module>
+		<module>../imagingbook-plugins-de2</module>
+		<module>../imagingbook-plugins-de3</module>
+		<module>../imagingbook-plugins-en1</module>
+		<module>../imagingbook-plugins-en2</module>
+		<module>../imagingbook-plugins-en3</module>
+		<module>../imagingbook-violajones</module>
+		<module>../imagingbook-calibrate</module>
+	</modules>
+	
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
 	<inceptionYear>2006</inceptionYear>
 	<url>http://www.imagingbook.com</url>
-	
+
 	<developers>
 		<developer>
 			<name>Wilhelm Burger</name>
@@ -21,7 +28,7 @@
 			<name>Mark J. Burge</name>
 		</developer>
 	</developers>
-	
+
 	<licenses>
 		<license>
 			<name>BSD 2-Clause "Simplified" License</name>
@@ -29,75 +36,42 @@
 		</license>
 	</licenses>
 
-	<scm>
-		<developerConnection>scm:git:https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git</developerConnection>
-		<tag>imagingbook-public-1.2</tag>
-	</scm>
-
-	<dependencies>
-		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>ij</artifactId>
-		</dependency>
-	</dependencies>
-
-	<distributionManagement>	<!-- required in deploy step of release plugin, http://www.disasterarea.co.uk/blog/maven-release-plugin/ -->
-		<repository>
-			<id>localrepo</id>
-			<name>Local release checkout</name>
-			<url>file:///c:/tmp/repo-release</url>
-			<!-- <url>file:${basedir}/../checkout/release</url> -->
-		</repository>
-		<snapshotRepository>
-			<id>localsnapshotrepo</id>
-			<name>Local snapshot checkout</name>
-			<url>file:///c:/tmp/repo-snapshots</url>
-			<!-- <url>file:${basedir}/../checkout/snapshots</url> -->
-		</snapshotRepository>
-	</distributionManagement>
-
-	<modules>
-		<module>imagingbook-common</module>
-		<module>imagingbook-plugins-all</module>
-		<module>imagingbook-plugins-de2</module>
-		<module>imagingbook-plugins-de3</module>
-		<module>imagingbook-plugins-en1</module>
-		<module>imagingbook-plugins-en2</module>
-		<module>imagingbook-plugins-en3</module>
-	</modules>
-
 	<properties>
-		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
-		<myproject.root>${basedir}/..</myproject.root>   <!-- property is redefined in submodule POMs! http://stackoverflow.com/a/8848129 -->
-
-		<!-- location for deploying JavaDoc output: -->
-		<!-- <imagingbook.webroot>imagingbook-website</imagingbook.webroot> --> <!-- OLD: PROJECTS/imagingbook-all/imagingbook-website/ -->
-		<imagingbook.webroot>../imagingbook-website</imagingbook.webroot> <!-- NEW: PROJECTS/imagingbook-website/ -->
-
-
-		<!-- overwrite in submodules if needed -->
-		<javadoc-doctitle>${project.name} (${project.version})</javadoc-doctitle>
-
-		<!-- https://itaffinity.wordpress.com/2014/02/25/maven-create-a-simple-build-number/ -->
-		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-		<buildDate>${maven.build.timestamp}</buildDate>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
-<!-- 	<repositories>
+	<repositories>
 		<repository>
 			<id>imagej.public</id>
 			<url>http://maven.imagej.net/content/groups/public</url>
 		</repository>
-	</repositories> -->
+	</repositories>
 
-<!-- 	<dependencies>
-		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>ij</artifactId>
-			<version>1.50h</version>
-		</dependency>
-	</dependencies> -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.imagej</groupId>
+				<artifactId>ij</artifactId>
+				<version>1.50h</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-math3</artifactId>
+				<version>3.6.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.imagingbook</groupId>
+				<artifactId>imagingbook-common</artifactId>
+				<version>FIXED</version>
+			</dependency>
+			
+
+		</dependencies>
+	</dependencyManagement>
+
 
 	<build>
 		<pluginManagement>
@@ -203,6 +177,5 @@
 			</plugin>
 		</plugins>
 	</reporting>
-
-	<version>1.2-SNAPSHOT</version>
+	<groupId>com.imagingbook</groupId>
 </project>
