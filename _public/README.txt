@@ -1,1 +1,0 @@
-This directory (no git submodule!) only holds the common POM file for all public projects.
