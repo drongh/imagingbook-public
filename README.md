@@ -14,12 +14,12 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 
 * [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public) (this page)
 * **[imagingbook-common](https://bitbucket.org/imagingbook/imagingbook-common)** (imagingbook-common library)
-* **[imagingbook_plugins_all](https://bitbucket.org/imagingbook/imagingbook-plugins-all)** (collection of all book plugins)
-* **[imagingbook_plugins_en1](https://bitbucket.org/imagingbook/imagingbook-plugins-en1)** (English ‘Professional’ 1st ed, 2008)
-* **[imagingbook_plugins_en2](https://bitbucket.org/imagingbook/imagingbook-plugins-en2)** (English ‘Undergraduate’ ed, Vols. 1-3, 2011-2013)
-* **[imagingbook_plugins_en3](https://bitbucket.org/imagingbook/imagingbook-plugins-en3)** (English ‘Professional’ 2nd ed, hardcover, 2016)
-* **[imagingbook_plugins_de2](https://bitbucket.org/imagingbook/imagingbook-plugins-de2)** (German 2nd ed., 2006)
-* **[imagingbook_plugins_de3](https://bitbucket.org/imagingbook/imagingbook-plugins-de3)** (German 3rd ed., 2015)
+* **[imagingbook_plugins_all](https://bitbucket.org/imagingbook/imagingbook-plugins-all/src)** (collection of all book plugins)
+* **[imagingbook_plugins_en1](https://bitbucket.org/imagingbook/imagingbook-plugins-en1/src)** (English ‘Professional’ 1st ed, 2008)
+* **[imagingbook_plugins_en2](https://bitbucket.org/imagingbook/imagingbook-plugins-en2/src)** (English ‘Undergraduate’ ed, Vols. 1-3, 2011-2013)
+* **[imagingbook_plugins_en3](https://bitbucket.org/imagingbook/imagingbook-plugins-en3/src)** (English ‘Professional’ 2nd ed, hardcover, 2016)
+* **[imagingbook_plugins_de2](https://bitbucket.org/imagingbook/imagingbook-plugins-de2/src)** (German 2nd ed., 2006)
+* **[imagingbook_plugins_de3](https://bitbucket.org/imagingbook/imagingbook-plugins-de3/src)** (German 3rd ed., 2015)
 
 
 
