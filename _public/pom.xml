@@ -38,6 +38,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<imagingbook.webdir>${project.basedir}/../../website/javadoc</imagingbook.webdir>
+		
 	</properties>
 
 	<repositories>
@@ -116,12 +119,20 @@
 				<version>2.10.3</version>
 				<configuration>
 					<!-- Default configuration for all reports -->
-					<!-- <reportOutputDirectory>${imagingbook.basedir}</reportOutputDirectory> -->
+					<reportOutputDirectory>${imagingbook.webdir}</reportOutputDirectory>
+					<destDir>${project.name}</destDir>
+					
 					<!-- <destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir> -->
+					
 					<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> -->
-					<reportOutputDirectory>${myproject.root}</reportOutputDirectory>
-					<destDir>${imagingbook.webroot}/javadoc/${project.name}</destDir>
-
+					<!-- <reportOutputDirectory>${myproject.root}</reportOutputDirectory> -->
+					<!-- <destDir>${imagingbook.webroot}/javadoc/${project.name}</destDir> -->
+								
+					
+					<!-- <reportOutputDirectory>${project.basedir}/../../myoutput</reportOutputDirectory> -->
+					<!-- <destDir>${imagingbook.webname}</destDir> -->
+					
+					
 					<doctitle>${javadoc-doctitle}</doctitle>
 					<packagesheader>${project.name}</packagesheader>
 					<!-- <header>The ImagingBook HEADER</header> -->
