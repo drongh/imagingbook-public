@@ -123,15 +123,11 @@
 					<destDir>${project.name}</destDir>
 					
 					<!-- <destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir> -->
-					
 					<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> -->
 					<!-- <reportOutputDirectory>${myproject.root}</reportOutputDirectory> -->
 					<!-- <destDir>${imagingbook.webroot}/javadoc/${project.name}</destDir> -->
-								
-					
 					<!-- <reportOutputDirectory>${project.basedir}/../../myoutput</reportOutputDirectory> -->
 					<!-- <destDir>${imagingbook.webname}</destDir> -->
-					
 					
 					<doctitle>${javadoc-doctitle}</doctitle>
 					<packagesheader>${project.name}</packagesheader>
