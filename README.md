@@ -21,7 +21,7 @@ Source code is divided into multiple GIT repositories:
 * **[imagingbook_plugins_de2](https://bitbucket.org/imagingbook/imagingbook-plugins-de2/src)** (German 2nd ed., 2006)
 * **[imagingbook_plugins_de3](https://bitbucket.org/imagingbook/imagingbook-plugins-de3/src)** (German 3rd ed., 2015)
 
-The **complete source** code may be obtained by cloning **this** repository, which contains
+The **complete source tree** may be obtained by cloning **this** repository, which contains
 the above repositories as GIT submodules:
 
 * **[imagingbook-public](https://bitbucket.org/imagingbook/imagingbook-public/src)** (clone recursively)
