@@ -9,9 +9,10 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 
 **Index terms:** digital image processing, computer algorithms, Java, ImageJ, textbook support.
 
-##Source code:
+##Source code
 
-* [GIT repository](https://bitbucket.org/imagingbook/imagingbook-public) (this page)
+Source code is divided into multiple GIT repositories:
+
 * **[imagingbook-common](https://bitbucket.org/imagingbook/imagingbook-common)** (imagingbook-common library)
 * **[imagingbook_plugins_all](https://bitbucket.org/imagingbook/imagingbook-plugins-all/src)** (collection of all book plugins)
 * **[imagingbook_plugins_en1](https://bitbucket.org/imagingbook/imagingbook-plugins-en1/src)** (English ‘Professional’ 1st ed, 2008)
@@ -20,6 +21,10 @@ Please visit the main website **[www.imagingbook.com](www.imagingbook.com)** for
 * **[imagingbook_plugins_de2](https://bitbucket.org/imagingbook/imagingbook-plugins-de2/src)** (German 2nd ed., 2006)
 * **[imagingbook_plugins_de3](https://bitbucket.org/imagingbook/imagingbook-plugins-de3/src)** (German 3rd ed., 2015)
 
+The complete source code may be obtained by cloning this repository (which contains
+the above repositories as GIT submodules):
+
+* **[imagingbook-public](https://bitbucket.org/imagingbook/imagingbook-public)**
 
 
 ## Downloads:
