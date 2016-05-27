@@ -24,7 +24,7 @@ Source code is divided into multiple GIT repositories:
 The complete source code may be obtained by cloning this repository (which contains
 the above repositories as GIT submodules):
 
-* **[imagingbook-public](https://bitbucket.org/imagingbook/imagingbook-public)**
+* **[imagingbook-public](https://bitbucket.org/imagingbook/imagingbook-public/src)** (clone recursively)
 
 
 ## Downloads:
