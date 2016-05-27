@@ -54,4 +54,4 @@ for instructions on installation and setup.
 
 ## NOTE
 
-This is the official ImagingBook repository (originally hosted at http://sourceforge.net/projects/imagingbook/ until March 2016).
+This is the official ImagingBook repository (previously hosted at http://sourceforge.net/projects/imagingbook/ until March 2016).
