@@ -1,5 +1,4 @@
-[![cover_en_100x100.png](https://bitbucket.org/repo/8Gjapq/images/1753759858-cover_en_100x100.png)](http://www.imagingbook.com)
-
+![frankenburg-1918-960x200k.png](https://bitbucket.org/repo/8Gjapq/images/443892583-frankenburg-1918-960x200k.png)
 
 # ImagingBook Source Repository
 
