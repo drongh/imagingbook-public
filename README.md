@@ -31,6 +31,9 @@ the above repositories as GIT submodules:
 
 * [**JAR files** (common library and ImageJ plugins)](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
 
+Instructions for installation and setup can be found [here](https://bitbucket.org/imagingbook/imagingbook-public/wiki/Installation%20and%20setup).
+
+
 
 ##JavaDoc Pages (common library and plugins for different book editions)
 
