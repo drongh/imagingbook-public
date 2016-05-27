@@ -21,18 +21,18 @@ Source code is divided into multiple GIT repositories:
 * **[imagingbook_plugins_de2](https://bitbucket.org/imagingbook/imagingbook-plugins-de2/src)** (German 2nd ed., 2006)
 * **[imagingbook_plugins_de3](https://bitbucket.org/imagingbook/imagingbook-plugins-de3/src)** (German 3rd ed., 2015)
 
-The complete source code may be obtained by cloning this repository (which contains
+The **complete source** code may be obtained by cloning this repository (which contains
 the above repositories as GIT submodules):
 
 * **[imagingbook-public](https://bitbucket.org/imagingbook/imagingbook-public/src)** (clone recursively)
 
 
-## Downloads:
+## Downloads
 
-* [JAR files (common library and ImageJ plugins)](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
+* [**JAR files** (common library and ImageJ plugins)](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
 
 
-##JavaDoc Pages (common library and plugins for different book editions):
+##JavaDoc Pages (common library and plugins for different book editions)
 
 * **[imagingbook-common](http://imagingbook.bitbucket.org/javadoc/imagingbook-common)** (imagingbook-common library)
 * **[imagingbook_plugins_all](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_all)** (collection of all book plugins)
@@ -48,6 +48,6 @@ the above repositories as GIT submodules):
 
 
 
-## NOTE:
+## NOTE
 
-This is the official ImagingBook repository (originally hosted at http://sourceforge.net/projects/imagingbook/ till March 2016).
+This is the official ImagingBook repository (originally hosted at http://sourceforge.net/projects/imagingbook/ until March 2016).
