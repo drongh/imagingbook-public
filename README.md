@@ -36,8 +36,6 @@ for instructions on installation and setup.
 
 
 
-
-
 ##JavaDoc Pages (common library and plugins for different book editions)
 
 * **[imagingbook-common](http://imagingbook.bitbucket.org/javadoc/imagingbook-common)** (imagingbook-common library)
@@ -48,10 +46,10 @@ for instructions on installation and setup.
 * **[imagingbook_plugins_de2](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de2)** (German 2nd ed., 2006)
 * **[imagingbook_plugins_de3](http://imagingbook.bitbucket.org/javadoc/imagingbook_plugins_de3)** (German 3rd ed., 2015)
 
-## Wiki:
+## Wiki
 
 * [Overview](https://bitbucket.org/imagingbook/imagingbook-public/wiki/browse/)
-
+* [Installation and setup](https://bitbucket.org/imagingbook/imagingbook-public/wiki/Installation%20and%20setup)
 
 
 ## NOTE
