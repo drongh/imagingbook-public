@@ -50,6 +50,7 @@ for instructions on installation and setup.
 
 * [Overview](https://bitbucket.org/imagingbook/imagingbook-public/wiki/browse/)
 * [Installation and setup](https://bitbucket.org/imagingbook/imagingbook-public/wiki/Installation%20and%20setup)
+* [License](https://bitbucket.org/imagingbook/imagingbook-public/wiki/License)
 
 
 ## NOTE
