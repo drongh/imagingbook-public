@@ -19,6 +19,3 @@
 [submodule "imagingbook-plugins-all"]
 	path = imagingbook-plugins-all
 	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-all.git
-[submodule "imagingbook-calibrate"]
-	path = imagingbook-calibrate
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-calibrate.git
