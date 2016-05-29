@@ -54,8 +54,8 @@ for instructions on installation and setup.
 
 ## Related projects
 
-* **[imagingbook-calibrate](https://bitbucket.org/imagingbook/imagingbook-calibrate)
-* **[imagingbook-violajones](https://bitbucket.org/imagingbook/imagingbook-violajones)
+* **[imagingbook-calibrate](https://bitbucket.org/imagingbook/imagingbook-calibrate)** (camera calibration)
+* **[imagingbook-violajones](https://bitbucket.org/imagingbook/imagingbook-violajones)** (face detection)
 
 ## NOTE
 
