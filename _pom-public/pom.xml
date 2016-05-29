@@ -41,7 +41,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
 		<imagingbook.webdir>${project.basedir}/../../website/javadoc</imagingbook.webdir>
-		
 	</properties>
 
 	<repositories>
