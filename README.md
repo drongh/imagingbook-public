@@ -52,11 +52,11 @@ for instructions on installation and setup.
 * [Installation and setup](https://bitbucket.org/imagingbook/imagingbook-public/wiki/Installation%20and%20setup)
 * [License](https://bitbucket.org/imagingbook/imagingbook-public/wiki/License)
 
+## Note
+
+This is the official **imagingbook** repository (previously hosted at http://sourceforge.net/projects/imagingbook/ until March 2016).
+
 ## Related projects
 
 * **[imagingbook-calibrate](https://bitbucket.org/imagingbook/imagingbook-calibrate)** (camera calibration)
 * **[imagingbook-violajones](https://bitbucket.org/imagingbook/imagingbook-violajones)** (face detection)
-
-## NOTE
-
-This is the official ImagingBook repository (previously hosted at http://sourceforge.net/projects/imagingbook/ until March 2016).
