@@ -52,6 +52,10 @@ for instructions on installation and setup.
 * [Installation and setup](https://bitbucket.org/imagingbook/imagingbook-public/wiki/Installation%20and%20setup)
 * [License](https://bitbucket.org/imagingbook/imagingbook-public/wiki/License)
 
+## Related projects
+
+* **[imagingbook-calibrate](https://bitbucket.org/imagingbook/imagingbook-calibrate)
+* **[imagingbook-violajones](https://bitbucket.org/imagingbook/imagingbook-violajones)
 
 ## NOTE
 
