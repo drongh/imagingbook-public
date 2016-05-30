@@ -19,3 +19,6 @@
 [submodule "imagingbook-plugins-all"]
 	path = imagingbook-plugins-all
 	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-all.git
+[submodule "wiki"]
+	path = wiki
+	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git/wiki
