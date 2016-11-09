@@ -12,8 +12,6 @@
 		<module>../imagingbook-plugins-en1</module>
 		<module>../imagingbook-plugins-en2</module>
 		<module>../imagingbook-plugins-en3</module>
-		
-		
 	</modules>
 	
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
@@ -168,6 +166,21 @@
 					</archive>
 				</configuration>
 			</plugin>
+			
+			<plugin>  <!-- generate a separate jar file with source code -->
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<version>3.0.1</version>
+			<executions>
+				<execution>
+					<id>attach-sources</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+			</plugin>
+			
 
 		</plugins>
 	</build>
