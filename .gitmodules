@@ -1,24 +1,23 @@
 [submodule "imagingbook-common"]
 	path = imagingbook-common
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-common.git
+	url = https://github.com/imagingbook/imagingbook-common.git
 [submodule "imagingbook-plugins-de2"]
 	path = imagingbook-plugins-de2
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-de2.git
+	url = https://github.com/imagingbook/imagingbook-plugins-de2.git
 [submodule "imagingbook-plugins-de3"]
 	path = imagingbook-plugins-de3
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-de3.git
+	url = https://github.com/imagingbook/imagingbook-plugins-de3.git
 [submodule "imagingbook-plugins-en1"]
 	path = imagingbook-plugins-en1
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-en1.git
+	url = https://github.com/imagingbook/imagingbook-plugins-en1.git
 [submodule "imagingbook-plugins-en2"]
 	path = imagingbook-plugins-en2
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-en2.git
+	url = https://github.com/imagingbook/imagingbook-plugins-en2.git
 [submodule "imagingbook-plugins-en3"]
 	path = imagingbook-plugins-en3
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-en3.git
+	url = https://github.com/imagingbook/imagingbook-plugins-en3.git
 [submodule "imagingbook-plugins-all"]
 	path = imagingbook-plugins-all
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-plugins-all.git
-[submodule "wiki"]
-	path = wiki
-	url = https://imagingbook@bitbucket.org/imagingbook/imagingbook-public.git/wiki
+	url = https://github.com/imagingbook/imagingbook-plugins-all.git
+
+
