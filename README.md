@@ -13,7 +13,7 @@ Please visit the main website **[imagingbook.com](https://imagingbook.com/)** fo
 
 Source code is divided into multiple GIT repositories:
 
-* **[imagingbook-common](https://github.com/imagingbook/imagingbook-common)** (imagingbook-common library)
+* **[imagingbook-common](https://github.com/imagingbook/imagingbook-doc/javadoc/imagingbook-common/)** (imagingbook-common library)
 * **[imagingbook_plugins_all](https://github.com/imagingbook/imagingbook-plugins-all)** (collection of all book plugins)
 * **[imagingbook_plugins_en1](https://github.com/imagingbook/imagingbook-plugins-en1)** (English ‘Professional’ 1st ed, 2008)
 * **[imagingbook_plugins_en2](https://github.com/imagingbook/imagingbook-plugins-en2)** (English ‘Undergraduate’ ed, Vols. 1-3, 2011-2013)
