@@ -36,7 +36,7 @@ for instructions on installation and setup.
 
 
 
-##JavaDoc Pages (common library and plugins for different book editions)
+## Documentation: JavaDoc Pages, code examples etc.
 
 * **[JavaDoc Tree](https://imagingbook.github.io/imagingbook-doc/)**
 
