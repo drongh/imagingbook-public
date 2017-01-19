@@ -1,4 +1,4 @@
-![frankenburg-1918-960x200k.png](https://github.com/repo/8Gjapq/images/443892583-frankenburg-1918-960x200k.png)
+![frankenburg-1918-960x200k.png](docs/img/443892583-frankenburg-1918-960x200k.png)
 
 # ImagingBook Source Code Repository
 
