@@ -24,7 +24,7 @@ Source code is divided into multiple GIT repositories:
 The **complete source tree** may be obtained by cloning **this** repository, which contains
 the above repositories as GIT submodules:
 
-* **[imagingbook-public](https://github.com/imagingbook/imagingbook-public/src)** (clone recursively)
+* **[imagingbook-public](https://github.com/imagingbook/imagingbook-public)** (clone recursively)
 
 
 ## Downloads
