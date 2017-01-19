@@ -32,7 +32,7 @@ the above repositories as GIT submodules:
 See [here](https://bitbucket.org/imagingbook/imagingbook-public/wiki/Installation%20and%20setup)
 for instructions on installation and setup.
 
-* [**JAR files** (common library and ImageJ plugins)](https://bitbucket.org/imagingbook/imagingbook-public/downloads)
+* [**JAR files** (common library, ImageJ plugins, ...)](https://github.com/imagingbook/imagingbook-jars)
 
 
 
