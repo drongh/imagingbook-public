@@ -2,7 +2,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>_public</artifactId>
 	<version>1.5-SNAPSHOT</version>
-	<packaging>pom</packaging>	
+	<packaging>pom</packaging>
+	
+	<distributionManagement>
+        <repository>
+            <id>imagingbook-maven-repository</id>
+            <name>Public Local Repository</name>
+            <url>file:///C:/PROJECTS-GITHUB/IMAGINGBOOK/imagingbook-parent/imagingbook-maven-repository</url>
+            <!-- <url>file:///Volumes/public.maven.repository/</url> -->
+        </repository>
+    </distributionManagement>
 	
 	<modules>
 		<module>../imagingbook-common</module>
