@@ -8,8 +8,9 @@
         <repository>
             <id>imagingbook-maven-repository</id>
             <name>Public Local Repository</name>
-            <url>file:///C:/PROJECTS-GITHUB/IMAGINGBOOK/imagingbook-parent/imagingbook-maven-repository</url>
             <!-- <url>file:///Volumes/public.maven.repository/</url> -->
+            <!-- <url>file:///C:/PROJECTS-GITHUB/IMAGINGBOOK/imagingbook-parent/imagingbook-maven-repository</url> -->
+            <url>file:///${project.basedir}/../../imagingbook-maven-repository</url>
         </repository>
     </distributionManagement>
 	
