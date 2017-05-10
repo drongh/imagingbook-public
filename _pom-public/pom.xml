@@ -22,10 +22,10 @@
 		<module>../imagingbook-plugins-en1</module>
 		<module>../imagingbook-plugins-en2</module>
 		<module>../imagingbook-plugins-en3</module>
-		<module>../../imagingbook-calibrate</module>
-		<module>../../imagingbook-common-private</module>
-		<module>../../imagingbook-violajones</module>
-		<module>../../imagingbook-pdftools</module>
+		<!-- <module>../../imagingbook-calibrate</module> -->
+		<!-- <module>../../imagingbook-common-private</module> -->
+		<!-- <module>../../imagingbook-violajones</module> -->
+		<!-- <module>../../imagingbook-pdftools</module> -->
 	</modules>
 	
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
