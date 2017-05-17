@@ -43,7 +43,7 @@ for instructions on installation and setup.
 
 ## Note
 
-This is the official **imagingbook** repository (previously hosted at http://sourceforge.net/projects/imagingbook/ until March 2016).
+This is the official **imagingbook** repository (previously hosted on SourceForge).
 
 ## Related projects
 
