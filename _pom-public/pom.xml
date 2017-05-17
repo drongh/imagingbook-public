@@ -86,6 +86,17 @@
 			
 		</dependencies>
 	</dependencyManagement>
+	
+	<dependencies>
+		<dependency>
+				<groupId>net.imagej</groupId>
+				<artifactId>ij</artifactId>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>com.imagingbook</groupId>
+			<artifactId>imagingbook-common</artifactId>
+		</dependency> -->
+	</dependencies>
 
 
 	<build>
