@@ -1,19 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>imagingbook-public-pom</artifactId>
-	<version>1.5-SNAPSHOT</version>
+	<version>1.5</version>
 	<packaging>pom</packaging>
-	
-	<distributionManagement>
-        <repository>
-            <id>imagingbook-maven-repository</id>
-            <name>Public Local Repository</name>
-            <!-- <url>file:///Volumes/public.maven.repository/</url> -->
-            <!-- <url>file:///C:/PROJECTS-GITHUB/IMAGINGBOOK/imagingbook-parent/imagingbook-maven-repository</url> -->
-            <url>file:///${project.basedir}/../../imagingbook-maven-repository</url>
-        </repository>
-    </distributionManagement>
-	
+
 	<modules>
 		<module>../imagingbook-common</module>
 		<module>../imagingbook-plugins-all</module>
@@ -27,7 +18,7 @@
 		<!-- <module>../../imagingbook-violajones</module> -->
 		<!-- <module>../../imagingbook-pdftools</module> -->
 	</modules>
-	
+
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
 	<inceptionYear>2006</inceptionYear>
 	<url>http://www.imagingbook.com</url>
@@ -51,10 +42,17 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		
-		<!-- <imagingbook.webdir>${project.basedir}/../../imagingbook-doc/javadoc</imagingbook.webdir> -->
+		<imagingbook.rootdir>${project.basedir}</imagingbook.rootdir>
 		<imagingbook.webdir>${project.basedir}/docs</imagingbook.webdir>
 	</properties>
+	
+	<distributionManagement>
+		<repository>
+			<id>imagingbook-maven-repository</id>     <!-- used by 'mvn deploy' -->
+			<name>Imagingbook Maven Repository</name>
+			<url>file:///${imagingbook.rootdir}/../../imagingbook-maven-repository</url>
+		</repository>
+	</distributionManagement>
 
 	<repositories>
 		<repository>
@@ -81,21 +79,19 @@
 			<dependency>
 				<groupId>com.imagingbook</groupId>
 				<artifactId>imagingbook-common</artifactId>
-				<version>1.5-SNAPSHOT</version>
+				<version>1.5</version>
 			</dependency>
-			
+
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<dependencies>
 		<dependency>
-				<groupId>net.imagej</groupId>
-				<artifactId>ij</artifactId>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>com.imagingbook</groupId>
-			<artifactId>imagingbook-common</artifactId>
-		</dependency> -->
+		<!-- <dependency> <groupId>com.imagingbook</groupId> <artifactId>imagingbook-common</artifactId> 
+			</dependency> -->
 	</dependencies>
 
 
@@ -144,15 +140,7 @@
 				<configuration>
 					<!-- Default configuration for all reports -->
 					<reportOutputDirectory>${imagingbook.webdir}</reportOutputDirectory>
-					<!-- <destDir>${project.name}</destDir> -->	
 					<destDir>javadoc</destDir>
-					
-					<!-- <destDir>${imagingbook.webdir}/javadoc/${project.name}</destDir> -->
-					<!-- <reportOutputDirectory>C:/PROJECTS/imagingbook</reportOutputDirectory> -->
-					<!-- <destDir>${imagingbook.webroot}/javadoc/${project.name}</destDir> -->
-					<!-- <reportOutputDirectory>${project.basedir}/../../myoutput</reportOutputDirectory> -->
-					<!-- <destDir>${imagingbook.webname}</destDir> -->
-					
 					<doctitle>${javadoc-doctitle}</doctitle>
 					<packagesheader>${project.name}</packagesheader>
 					<!-- <header>The ImagingBook HEADER</header> -->
@@ -191,21 +179,20 @@
 					</archive>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>  <!-- generate a separate jar file with source code -->
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-source-plugin</artifactId>
-			<version>3.0.1</version>
-			<executions>
-				<execution>
-					<id>attach-sources</id>
-					<goals>
-						<goal>jar</goal>
-					</goals>
-				</execution>
-			</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
-			
 
 		</plugins>
 	</build>
