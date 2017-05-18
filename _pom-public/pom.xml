@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>imagingbook-public-pom</artifactId>
-	<version>1.5</version>
+	<version>1.6-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -17,6 +17,7 @@
 		<!-- <module>../../imagingbook-common-private</module> -->
 		<!-- <module>../../imagingbook-violajones</module> -->
 		<!-- <module>../../imagingbook-pdftools</module> -->
+		<!-- <module>_pom-plugins</module> -->
 	</modules>
 
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
@@ -79,7 +80,7 @@
 			<dependency>
 				<groupId>com.imagingbook</groupId>
 				<artifactId>imagingbook-common</artifactId>
-				<version>1.5</version>
+				<version>1.6-SNAPSHOT</version>
 			</dependency>
 
 		</dependencies>
