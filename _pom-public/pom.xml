@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.imagingbook</groupId>
 	<artifactId>imagingbook-public-pom</artifactId>
 	<version>1.6-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -47,6 +48,15 @@
 		<imagingbook.webdir>${project.basedir}/docs</imagingbook.webdir>
 	</properties>
 	
+	<repositories>
+		<repository>
+			<id>imagingbook-maven-repository</id>
+			<name>imagingbook-maven-repository on GitHub</name>
+			<url>https://raw.github.com/imagingbook/imagingbook-maven-repository/master</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+	
 	<distributionManagement>
 		<repository>
 			<id>imagingbook-maven-repository</id>     <!-- used by 'mvn deploy' -->
@@ -55,26 +65,20 @@
 		</repository>
 	</distributionManagement>
 
-	<repositories>
-		<repository>
-			<id>imagej.public</id>
-			<url>http://maven.imagej.net/content/groups/public</url>
-		</repository>
-	</repositories>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>net.imagej</groupId>
 				<artifactId>ij</artifactId>
-				<version>1.51h</version>
-				<!-- search http://maven.imagej.net/#nexus-search;gav~net.imagej~ij~~~~kw,versionexpand -->
+				<version>1.51n</version>
+				<!-- https://mvnrepository.com/artifact/net.imagej/ij -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-math3</artifactId>
 				<version>3.6.1</version>
+				<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
 			</dependency>
 
 			<dependency>
@@ -91,8 +95,6 @@
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
 		</dependency>
-		<!-- <dependency> <groupId>com.imagingbook</groupId> <artifactId>imagingbook-common</artifactId> 
-			</dependency> -->
 	</dependencies>
 
 
@@ -210,5 +212,5 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	<groupId>com.imagingbook</groupId>
+	
 </project>
