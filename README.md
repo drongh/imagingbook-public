@@ -29,7 +29,7 @@ the above repositories as GIT submodules:
 
 ## Downloads
 
-See [here](https://bitbucket.org/imagingbook/imagingbook-public/wiki/Installation%20and%20setup)
+See [here](https://imagingbook.com/source/)
 for instructions on installation and setup.
 
 * [**JAR files** (common library, ImageJ plugins, ...)](https://github.com/imagingbook/imagingbook-jars)
