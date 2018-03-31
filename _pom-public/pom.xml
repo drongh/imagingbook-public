@@ -70,7 +70,7 @@
 			<dependency>
 				<groupId>net.imagej</groupId>
 				<artifactId>ij</artifactId>
-				<version>1.51s</version>
+				<version>1.51w</version>
 				<!-- https://mvnrepository.com/artifact/net.imagej/ij -->
 			</dependency>
 
