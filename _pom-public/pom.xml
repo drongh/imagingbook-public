@@ -21,10 +21,25 @@
 		<!-- <module>_pom-plugins</module> -->
 	</modules>
 
+	<name>ImagingBook Parent</name>
 	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
 	<inceptionYear>2006</inceptionYear>
 	<url>http://www.imagingbook.com</url>
-
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<imagingbook.rootdir>${project.basedir}</imagingbook.rootdir>
+		<imagingbook.webdir>${project.basedir}/docs</imagingbook.webdir>
+		
+		<java.version>1.8</java.version>
+		<imagej.version>1.51w</imagej.version>
+		<commons-math3.version>3.6.1</commons-math3.version>
+		<itext.version>5.5.8</itext.version>
+		<imagingbook.version>1.6-SNAPSHOT</imagingbook.version>
+		
+	</properties>
+	
 	<developers>
 		<developer>
 			<name>Wilhelm Burger</name>
@@ -41,13 +56,7 @@
 		</license>
 	</licenses>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<imagingbook.rootdir>${project.basedir}</imagingbook.rootdir>
-		<imagingbook.webdir>${project.basedir}/docs</imagingbook.webdir>
-	</properties>
-	
+
 	<repositories>
 		<repository>
 			<id>imagingbook-maven-repository</id>
@@ -70,31 +79,31 @@
 			<dependency>
 				<groupId>net.imagej</groupId>
 				<artifactId>ij</artifactId>
-				<version>1.51w</version>
+				<version>${imagej.version}</version>
 				<!-- https://mvnrepository.com/artifact/net.imagej/ij -->
 			</dependency>
 
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-math3</artifactId>
-				<version>3.6.1</version>
+				<version>${commons-math3.version}</version>
 				<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
 			</dependency>
 
-			<dependency>
+			<!-- <dependency>
 				<groupId>com.imagingbook</groupId>
 				<artifactId>imagingbook-common</artifactId>
 				<version>1.6-SNAPSHOT</version>
-			</dependency>
+			</dependency> -->
 
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
-		<dependency>
+		<!-- <dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 
@@ -106,8 +115,8 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.3</version>
 					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
 					</configuration>
 				</plugin>
 			</plugins>
