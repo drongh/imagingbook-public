@@ -9,7 +9,7 @@ Please visit the main website **[imagingbook.com](https://imagingbook.com/)** fo
 
 **Index terms:** digital image processing, computer algorithms, Java, ImageJ, textbook support.
 
-##Source code
+## Source code
 
 Source code is divided into multiple GIT repositories:
 
