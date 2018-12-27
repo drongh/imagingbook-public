@@ -167,7 +167,6 @@
 				</configuration>
 			</plugin>
 
-
 			<plugin>  <!-- add more properties to MANIFEST file -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
