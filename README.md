@@ -38,8 +38,8 @@ for instructions on installation and setup.
 
 ## Documentation: JavaDoc Pages, code examples etc.
 
-* **[JavaDoc pages for common library and ImageJ plugins](https://imagingbook.github.io/imagingbook-doc/)**
-
+* [**JavaDoc pages for common library and ImageJ plugins**](https://imagingbook.github.io/imagingbook-doc/)
+* [**Recent changes**](CHANGES.md)
 
 ## Note
 
