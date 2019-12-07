@@ -19,8 +19,6 @@
 [submodule "imagingbook-plugins-all"]
 	path = imagingbook-plugins-all
 	url = https://github.com/imagingbook/imagingbook-plugins-all.git
-
-
 [submodule "imagingbook-examples"]
 	path = imagingbook-examples
 	url = https://github.com/imagingbook/imagingbook-examples.git
