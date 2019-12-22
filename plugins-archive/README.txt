@@ -1,0 +1,1 @@
+This folder contains archived ImageJ demo plugins for specific book editions.
