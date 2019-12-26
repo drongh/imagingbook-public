@@ -80,27 +80,27 @@
 				<!-- https://mvnrepository.com/artifact/net.imagej/ij -->
 			</dependency>
 
-			<dependency>
+			<!-- <dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-math3</artifactId>
 				<version>${commons-math3.version}</version>
-				<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
-			</dependency>
+				https://mvnrepository.com/artifact/org.apache.commons/commons-math3
+			</dependency> -->
 			
 			<!-- https://mvnrepository.com/artifact/com.github.wendykierp/JTransforms -->
 			<!-- https://github.com/wendykierp/JTransforms -->
-			<dependency>
+			<!-- <dependency>
 			    <groupId>com.github.wendykierp</groupId>
 			    <artifactId>JTransforms</artifactId>
 			    <version>${jtransforms.version}</version>
-			    <!-- <classifier>with-dependencies</classifier> -->
-			</dependency>
+			    <classifier>with-dependencies</classifier>
+			</dependency> -->
 			
-			<dependency>
+			<!-- <dependency>
 				<groupId>com.imagingbook</groupId>
 				<artifactId>imagingbook-common</artifactId>
 				<version>${imagingbook.version}</version>
-			</dependency>
+			</dependency> -->
 
 		</dependencies>
 	</dependencyManagement>
