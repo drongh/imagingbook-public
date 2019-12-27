@@ -14,12 +14,7 @@ Please visit the main website **[imagingbook.com](https://imagingbook.com/)** fo
 Source code is divided into multiple GIT repositories:
 
 * **[imagingbook-common](https://github.com/imagingbook/imagingbook-common)** (imagingbook-common library, also available as a **Maven artefact**)
-* **[imagingbook_plugins_all](https://github.com/imagingbook/imagingbook-plugins-all)** (collection of all book plugins)
-* **[imagingbook_plugins_en1](https://github.com/imagingbook/imagingbook-plugins-en1)** (English ‘Professional’ 1st ed, 2008)
-* **[imagingbook_plugins_en2](https://github.com/imagingbook/imagingbook-plugins-en2)** (English ‘Undergraduate’ ed, Vols. 1-3, 2011-2013)
-* **[imagingbook_plugins_en3](https://github.com/imagingbook/imagingbook-plugins-en3)** (English ‘Professional’ 2nd ed, hardcover, 2016)
-* **[imagingbook_plugins_de2](https://github.com/imagingbook/imagingbook-plugins-de2)** (German 2nd ed., 2006)
-* **[imagingbook_plugins_de3](https://github.com/imagingbook/imagingbook-plugins-de3)** (German 3rd ed., 2015)
+* **[imagingbook_plugins_all](https://github.com/imagingbook/imagingbook-plugins-all)** (collection of ImageJ plugins for all book editions)
 
 The **complete source tree** may be obtained by cloning **this** repository, which contains
 the above repositories as GIT submodules:
@@ -47,5 +42,7 @@ This is the official **imagingbook** repository (previously hosted on SourceForg
 
 ## Related projects
 
+* **[imagingbook-maven-demo-project](https://github.com/imagingbook/imagingbook-maven-demo-project)** (minimal Maven setup for ImageJ + imagingbook-library)
+* **[imagej1-plugins-ide-setup]()** (setup for writing ImageJ Plugins with Eclipse, IntelliJ or NetBeans)
 * **[imagingbook-calibrate](https://github.com/imagingbook/imagingbook-calibrate)** (camera calibration)
 * **[imagingbook-violajones](https://github.com/imagingbook/imagingbook-violajones)** (face detection)
