@@ -14,7 +14,7 @@ Please visit the main website **[imagingbook.com](https://imagingbook.com/)** fo
 Source code is divided into multiple GIT repositories:
 
 * **[imagingbook-common](https://github.com/imagingbook/imagingbook-common)** (``imagingbook-common`` library, also available as a **Maven artefact**)
-* **[imagingbook_plugins_all](https://github.com/imagingbook/imagingbook-plugins-all)** (collection of ImageJ plugins for all book editions)
+* **[imagingbook_plugins_all](https://github.com/imagingbook/imagingbook-plugins-all)** (collection of ImageJ plugins for all book editions and more)
 
 The **complete source tree** may be obtained by cloning **this** repository, which contains
 the above repositories as GIT submodules:
